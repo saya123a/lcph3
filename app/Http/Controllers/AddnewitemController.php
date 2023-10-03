@@ -17,7 +17,7 @@ class AddnewitemController extends Controller
        $data = $request->validate([
            'item_barcode' => 'required',
            'item_name' => 'required',
-           'item_brand' => 'nullable'
+           'item_brand' => 'required'
        ]);
 
        $add = Addnewitem::create($data);
