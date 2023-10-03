@@ -23,4 +23,4 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/addnewitem', [AddnewitemController::class, 'addnewitem'])->name('addnewitem');
-Route::post('/addnewitem', [AddnewitemController::class, 'addnewitem'])->name('addnewitem');
+Route::post('/addnewitem', [AddnewitemController::class, 'addnewitems'])->name('addnewitem');
