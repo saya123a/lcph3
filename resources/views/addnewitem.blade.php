@@ -11,7 +11,7 @@
 	</head>
 	<body>
     <h1>Hai</h1>
-        <form method="post" action="{{route('addnewitem')}}">
+        <form method="post" action="{{route('addnewitems')}}">
             @csrf
             @method('post')
             <div class="data-input">
