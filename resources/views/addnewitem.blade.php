@@ -12,7 +12,6 @@
 	<body>
     <h1>Hai</h1>
         <form method="post" action="{{route('addnewitems')}}">
-            @csrf
             <div class="data-input">
 				<label for="item_barcode">Barcode:</label>
 				<input type="text" id="item_barcode" name="item_barcode" required>
