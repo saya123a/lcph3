@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Addnewitem;
 
 class AddnewitemController extends Controller
 {
@@ -13,6 +14,13 @@ class AddnewitemController extends Controller
 
    public function addnewitems(Request $request)
    {
-       dd($request);
+       $data = $request->validate([
+           'item_barcode',
+           'item_name',
+           'item_brand'
+       ]);
+
+       $add = Addnewitem::create($data);
+       return redirect(route('addnewitem'));
    }
 }
