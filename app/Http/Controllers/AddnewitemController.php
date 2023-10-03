@@ -21,6 +21,6 @@ class AddnewitemController extends Controller
        ]);
 
        $add = Addnewitem::create($data);
-       return redirect()->back();
+       return redirect(route('addnewitem'));
    }
 }
