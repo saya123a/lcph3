@@ -9,6 +9,8 @@ class Addnewitem extends Model
 {
     use HasFactory;
 
+    protected $table = 'item';
+
     protected $fillable = [
       'item_barcode',
       'item_name',
