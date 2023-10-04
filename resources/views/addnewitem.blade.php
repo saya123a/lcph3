@@ -8,19 +8,10 @@
 		<!--External CSS-->
 		<link rel="stylesheet" href="update.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-    $(document).ready(function () {
-        $(".edit-button").click(function () {
-            const itemId = $(this).data("id");
-            $(`#edit-row-${itemId}`).toggle();
-        });
-    });
-</script>
 	</head>
 	<body>
     <h1>Hai</h1>
-        <form method="post" action="{{ route('addnewitems') }}">
+        <form method="post" action="{{route('addnewitems')}}">
             @csrf
             <div class="data-input">
 				<label for="item_barcode">Barcode:</label>
@@ -46,24 +37,6 @@
             <td>{{ $item->item_barcode }}</td>
             <td>{{ $item->item_name }}</td>
             <td>{{ $item->item_brand }}</td>
-            <td>
-                <a href="{{ route('edititem', ['id' => $item->id]) }}">Edit</a>
-            </td>
-        </tr>
-        <tr id="edit-row-{{ $item->id }}" style="display: none;">
-            <td colspan="7">
-                <!-- Edit Form (initially hidden) -->
-                <form method="post" action="{{ route('updateitem', $item->id) }}">
-    @csrf
-    @method('put')
-    <div class="data-input">
-        <label for="item_barcode">Barcode:</label>
-        <input type="text" id="item_barcode" name="item_barcode" value="{{ $item->item_barcode }}" required>
-    </div>
-    <!-- Add similar fields for 'item_name' and 'item_brand' -->
-    <button type="submit" name="submit" class="submit-button">Update</button>
-</form>
-            </td>
         </tr>
         @endforeach
     </table>
