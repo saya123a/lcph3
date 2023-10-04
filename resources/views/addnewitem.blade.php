@@ -33,6 +33,8 @@
         <td>{{$show->item_barcode}}</td>
         <td>{{$show->item_name}}</td>
         <td>{{$show->item_brand}}</td>
+        <td>{{$show->created_at}}</td>
+        <td>{{$show->updated_at}}</td>
         @endforeach
         </table></div>
   </body>
