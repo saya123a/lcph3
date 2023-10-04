@@ -31,7 +31,7 @@
         <!-- Display Data -->
         <div>
             <table>
-                @foreach($show as $item)
+                @foreach($items as $item)
                 <tr>
                     <td>{{ $item->id }}</td>
                     <td>{{ $item->item_barcode }}</td>
