@@ -26,11 +26,6 @@
 			</div>
 			<button type="submit" name="submit" class="submit-button">Submit</button>
         </form>
-        @foreach($show)
-        {{$show->id}}
-        {{$show->item_barcode}}
-        {{$show->item_name}}
-        {{$show->item_brand}}
-        @endforeach
+        
   </body>
 </html>
