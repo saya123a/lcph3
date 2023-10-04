@@ -45,7 +45,7 @@
         <tr id="edit-row-{{ $item->id }}" style="display: none;">
             <td colspan="7">
                 <!-- Edit Form (initially hidden) -->
-                <form method="post" action="{{ route('updateitem', ['id' => $item->id]) }}">
+                <form method="post" action="{{ route('updateitem', $item->id) }}">
     @csrf
     @method('put')
     <div class="data-input">
