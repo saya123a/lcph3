@@ -25,6 +25,12 @@ class AddnewitemController extends Controller
        return redirect(route('addnewitem'));
    }
 
+   public function edititem($id)
+{
+    $item = Addnewitem::find($id);
+    return view('edit', ['item' => $item]);
+}
+    
    public function updateitem(Request $request, $id)
 {
     $data = $request->validate([
