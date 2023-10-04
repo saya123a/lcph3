@@ -7,11 +7,11 @@ use App\Models\Addnewitem;
 
 class AddnewitemController extends Controller
 {
-   public function addnewitem()
-   {
-       $show = Addnewitem::all();
-       return view('addnewitem', ['show' => $show]);
-   }
+    public function addnewitem()
+        {
+            $items = Addnewitem::all();
+            return view('addnewitem', ['items' => $items]);
+        }
 
    public function addnewitems(Request $request)
    {
