@@ -9,7 +9,8 @@ class AddnewitemController extends Controller
 {
    public function addnewitem()
    {
-       return view('addnewitem');
+       $show = Addnewitem::all();
+       return view('addnewitem', ['addnewitem' => $show]);
    }
 
    public function addnewitems(Request $request)
