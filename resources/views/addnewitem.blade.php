@@ -11,7 +11,7 @@
 	</head>
 	<body>
     <h1>Hai</h1>
-        <form method="post" action="{{route('addnewitems')}}">
+        <form method="post" action="{{ route('addnewitems') }}">
             @csrf
             <div class="data-input">
 				<label for="item_barcode">Barcode:</label>
@@ -27,15 +27,21 @@
 			</div>
 			<button type="submit" name="submit" class="submit-button">Submit</button>
         </form>
-        <div><table>
-        @foreach($show)
-        <td>{{$show->id}}</td>
-        <td>{{$show->item_barcode}}</td>
-        <td>{{$show->item_name}}</td>
-        <td>{{$show->item_brand}}</td>
-        <td>{{$show->created_at}}</td>
-        <td>{{$show->updated_at}}</td>
-        @endforeach
-        </table></div>
+        
+        <!-- Display Data -->
+        <div>
+            <table>
+                @foreach($show as $item)
+                <tr>
+                    <td>{{ $item->id }}</td>
+                    <td>{{ $item->item_barcode }}</td>
+                    <td>{{ $item->item_name }}</td>
+                    <td>{{ $item->item_brand }}</td>
+                    <td>{{ $item->created_at }}</td>
+                    <td>{{ $item->updated_at }}</td>
+                </tr>
+                @endforeach
+            </table>
+        </div>
   </body>
 </html>
