@@ -24,25 +24,4 @@ class AddnewitemController extends Controller
        $add = Addnewitem::create($data);
        return redirect(route('addnewitem'));
    }
-
-   public function edititem($id)
-{
-    $item = Addnewitem::find($id);
-    return view('edit', ['item' => $item]);
-}
-    
-   public function updateitem(Request $request, $id)
-{
-    $data = $request->validate([
-        'item_barcode' => 'required',
-        'item_name' => 'required',
-        'item_brand' => 'required'
-    ]);
-
-    $item = Addnewitem::find($id);
-    $item->update($data);
-
-    return redirect(route('addnewitem'));
-}
-
 }
