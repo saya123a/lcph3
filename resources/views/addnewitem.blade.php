@@ -33,12 +33,9 @@
             <table>
                 @foreach($items as $item)
                 <tr>
-                    <td>{{ $item->id }}</td>
                     <td>{{ $item->item_barcode }}</td>
                     <td>{{ $item->item_name }}</td>
                     <td>{{ $item->item_brand }}</td>
-                    <td>{{ $item->created_at }}</td>
-                    <td>{{ $item->updated_at }}</td>
                 </tr>
                 @endforeach
             </table>
