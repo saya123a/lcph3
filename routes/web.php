@@ -24,3 +24,4 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('/addnewitem', [AddnewitemController::class, 'addnewitem'])->name('addnewitem');
 Route::post('/addnewitem', [AddnewitemController::class, 'addnewitems'])->name('addnewitems');
+Route::put('/updateitem/{id}', [AddnewitemController::class, 'updateitem'])->name('updateitem');
