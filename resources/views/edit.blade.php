@@ -13,6 +13,7 @@
         <h1>Edit Item</h1>
         <form method="post" action="{{route('edit', ['item' => $item])}}">
             @csrf
+            @method('PUT') {{-- or @method('PATCH') --}}
             <div class="data-input">
                 <label for="item_barcode">Barcode:</label>
                 <input type="text" id="item_barcode" name="item_barcode" value="{{$item->item_barcode}}" required>
