@@ -1,16 +1,14 @@
-<?php
-
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Loginpage;
+use App\Models\Loginpage; // Assuming you have a 'User' model for user management
 use Illuminate\Support\Facades\Auth;
 
 class LoginpageController extends Controller
 {
     public function loginform()
     {
-        return view('login');
+        return view('loginpage');
     }
 
     public function login(Request $request)
@@ -29,20 +27,20 @@ class LoginpageController extends Controller
 
     public function signupform()
     {
-        return view('login');
+        return view('loginpage');
     }
 
     public function signup(Request $request)
     {
         $data = $request->validate([
-            'username' => 'required|unique',
+            'username' => 'required|unique:login',
             'password' => 'required',
         ]);
 
         $data['password'] = bcrypt($data['password']); // Hash the password
 
-        Login::create($data);
+        Loginpage::create($data); // Use the correct model for user creation
 
-        return redirect(route('login'))->with('msgsuccess', 'Successfully Registered.');
+        return redirect(route('loginpage'))->with('msgsuccess', 'Successfully Registered.');
     }
 }
