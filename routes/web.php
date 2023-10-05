@@ -29,10 +29,10 @@ Route::put('/addnewitem/{item}/update', [AddnewitemController::class, 'update'])
 Route::delete('/addnewitem/{item}/delete', [AddnewitemController::class, 'delete'])->name('delete');
 */
 
-Route::get('/', [LoginController::class, 'loginform'])->name('login');
-Route::post('/login', [LoginController::class, 'login']);
-Route::get('/signup', [LoginController::class, 'signupform'])->name('signup');
-Route::post('/signup', [LoginController::class, 'signup']);
+Route::get('/', [LoginController::class, 'loginform'])->name('loginform');
+Route::post('/login', [LoginController::class, 'login'])->name('login');
+Route::get('/signup', [LoginController::class, 'signupform'])->name('signupform');
+Route::post('/signup', [LoginController::class, 'signup'])->name('singup');
 
 // These routes are part of Laravel's authentication scaffolding
 Auth::routes();
