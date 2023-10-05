@@ -41,4 +41,10 @@ class AddnewitemController extends Controller
        $item->update($data);
        return redirect(route('addnewitem'));
    }
+
+   public function delete(Addnewitem $item)
+   {
+       $item->delete();
+       return redirect(route('addnewitem'));
+   }
 }
