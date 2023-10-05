@@ -13,17 +13,18 @@
     <h1>Hai</h1>
         <form method="post" action="{{route('addnewitems')}}">
             @csrf
+            @method('POST')
             <div class="data-input">
 				<label for="item_barcode">Barcode:</label>
-				<input type="text" id="item_barcode" name="item_barcode" value="{{ old('item_barcode') }}" required>
+				<input type="text" id="item_barcode" name="item_barcode" required>
 			</div>
 			<div class="data-input">
 				<label for="item_name">Name:</label>
-				<input type="text" id="item_name" name="item_name" value="{{ old('item_name') }}" required>
+				<input type="text" id="item_name" name="item_name" required>
 			</div>
 			<div class="data-input">
 				<label for="item_brand">Brand:</label>
-				<input type="text" id="item_brand" name="item_brand" value="{{ old('item_brand') }}" required>
+				<input type="text" id="item_brand" name="item_brand" required>
 			</div>
 			<button type="submit" name="submit" class="submit-button">Submit</button>
         </form>
