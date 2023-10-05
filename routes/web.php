@@ -31,8 +31,8 @@ Route::delete('/addnewitem/{item}/delete', [AddnewitemController::class, 'delete
 
 Route::get('/', [LoginController::class, 'loginform'])->name('loginform');
 Route::post('/login', [LoginController::class, 'login'])->name('login');
-Route::get('/signup', [LoginController::class, 'signupform'])->name('signupform');
-Route::post('/signup', [LoginController::class, 'signup'])->name('singup');
+Route::get('/login', [LoginController::class, 'signupform'])->name('signupform');
+Route::post('/login', [LoginController::class, 'signup'])->name('singup');
 
 // These routes are part of Laravel's authentication scaffolding
 Auth::routes();
