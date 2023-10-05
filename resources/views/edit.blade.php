@@ -11,7 +11,7 @@
     </head>
     <body>
         <h1>Edit Item</h1>
-        <form method="post" action="{{route('edit', ['item' => $item])}}">
+        <form method="post" action="{{route('update', ['item' => $item])}}">
             @csrf
             @method('PUT') {{-- or @method('PATCH') --}}
             <div class="data-input">
