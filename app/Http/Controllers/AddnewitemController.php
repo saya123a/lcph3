@@ -25,7 +25,7 @@ class AddnewitemController extends Controller
        return redirect(route('addnewitem'));
    }
 
-   public function edit(Addnewitem item)
+   public function edit(Addnewitem $item)
    {
         dd($item);
    }
