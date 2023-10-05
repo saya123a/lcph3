@@ -30,7 +30,7 @@ Route::put('/addnewitem/{item}/update', [AddnewitemController::class, 'update'])
 Route::delete('/addnewitem/{item}/delete', [AddnewitemController::class, 'delete'])->name('delete');
 */
 
-Route::get('/login', '[LoginController::class, 'login'])->name('login');
+Route::get('/login', [LoginController::class, 'login'])->name('login');
 Route::post('/login', [LoginController::class, 'login']);
 Route::get('/signup', [LoginController::class, 'signup'])->name('signup');
 Route::post('/signup', [LoginController::class, 'signup']');
