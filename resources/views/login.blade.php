@@ -56,8 +56,7 @@
 						</div>
 					</form>
 					<form action="{{route('signup')}}" method="post" class="signup">
-                        @csrf
-                        @method('POST')
+     
 						<div class="field">
 							<input type="text" name="username" placeholder="Username" required>
 						</div>
