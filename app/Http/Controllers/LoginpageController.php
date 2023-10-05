@@ -15,7 +15,7 @@ class LoginpageController extends Controller
     {
         $credentials = $request->validate([
             'username' => 'required',
-            'password' => 'required',
+            'password' => 'required'
         ]);
 
         if (Auth::attempt($credentials)) {
@@ -34,7 +34,7 @@ class LoginpageController extends Controller
     {
         $data = $request->validate([
             'username' => 'required|unique:login',
-            'password' => 'required',
+            'password' => 'required'
         ]);
 
         $data['password'] = bcrypt($data['password']); // Hash the password
