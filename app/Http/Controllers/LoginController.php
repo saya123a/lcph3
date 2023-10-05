@@ -28,7 +28,7 @@ class LoginController extends Controller
 
     public function signupform()
     {
-        return view('signup');
+        return view('login');
     }
 
     public function signup(Request $request)
@@ -42,6 +42,6 @@ class LoginController extends Controller
 
         Login::create($data);
 
-        return redirect()->route('loginform')->with('msgsuccess', 'Successfully Registered.');
+        return redirect()->route('login')->with('msgsuccess', 'Successfully Registered.');
     }
 }
