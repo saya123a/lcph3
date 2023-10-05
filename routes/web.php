@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AddnewitemController;
-use App\Http\Controllers\LoginController;
+use App\Http\Controllers\LoginpageController;
 use App\Http\Controllers\HomepageController;
 
 /*
@@ -29,10 +29,10 @@ Route::put('/addnewitem/{item}/update', [AddnewitemController::class, 'update'])
 Route::delete('/addnewitem/{item}/delete', [AddnewitemController::class, 'delete'])->name('delete');
 */
 
-Route::get('/', [LoginController::class, 'loginform'])->name('loginform');
-Route::post('/login', [LoginController::class, 'login'])->name('login');;
-Route::get('/login', [LoginController::class, 'signupform'])->name('signupform');
-Route::post('/login', [LoginController::class, 'signup'])->name('signup');;
+Route::get('/', [LoginpageController::class, 'loginform'])->name('loginform');
+Route::post('/loginpage', [LoginpageController::class, 'login'])->name('login');;
+Route::get('/loginpage', [LoginpageController::class, 'signupform'])->name('signupform');
+Route::post('/loginpage', [LoginpageController::class, 'signup'])->name('signup');;
 
 // These routes are part of Laravel's authentication scaffolding
 Auth::routes();
