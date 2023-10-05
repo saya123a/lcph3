@@ -33,5 +33,6 @@ Route::delete('/addnewitem/{item}/delete', [AddnewitemController::class, 'delete
 Route::get('/', [LoginController::class, 'loginform'])->name('login');
 Route::post('/login', [LoginController::class, 'login']);
 Auth::routes();
+Route::get('/homepage', [HomepageController::class, 'homepage'])->middleware('auth');
 Route::get('/signup', [LoginController::class, 'signupform'])->name('signup');
 Route::post('/signup', [LoginController::class, 'signup']);
