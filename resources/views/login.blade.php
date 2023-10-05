@@ -39,7 +39,7 @@
 					<div class="slider-tab"></div>
 				</div>
 				<div class="form-inner">
-					<form method="post" action="" class="login">
+					<form method="post" action="{{route('login')}}" class="login">
 						<div class="field">
 							<input type="text" name="username" placeholder="Username" required>
 						</div>
@@ -54,7 +54,7 @@
 							Not a member? <a href="">Signup now</a>
 						</div>
 					</form>
-					<form action="" method="post" class="signup">
+					<form action="{{route('signup')}}" method="post" class="signup">
 						<div class="field">
 							<input type="text" name="username" placeholder="Username" required>
 						</div>
