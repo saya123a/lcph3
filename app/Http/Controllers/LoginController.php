@@ -35,13 +35,13 @@ class LoginController extends Controller
     public function signup(Request $request)
     {
         $data = $request->validate([
-            'username' => 'required|unique:login',
+            'username' => 'required|unique',
             'password' => 'required',
         ]);
 
         $data['password'] = bcrypt($data['password']); // Hash the password
 
-        Login::create($data);
+        $add = Login::create($data);
 
         return redirect()->route('login')->with('msgsuccess', 'Successfully Registered.');
     }
