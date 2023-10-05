@@ -21,7 +21,7 @@ class LoginController extends Controller
         ]);
 
         if (Auth::attempt($credentials)) {
-            return redirect()->route('homepage'); // Change this to your home route
+            return redirect(route('homepage')); // Change this to your home route
         }
 
         return redirect()->back()->withErrors(['msgfailed' => 'Username does not exist or the password is incorrect.']);
@@ -41,8 +41,8 @@ class LoginController extends Controller
 
         $data['password'] = bcrypt($data['password']); // Hash the password
 
-        $add = Login::create($data);
+        Login::create($data);
 
-        return redirect()->route('login')->with('msgsuccess', 'Successfully Registered.');
+        return redirect(route('login'))->with('msgsuccess', 'Successfully Registered.');
     }
 }
