@@ -29,4 +29,15 @@ class AddnewitemController extends Controller
    {
         return view('edit', ['item' => $item]);
    }
-}
+
+   public function update(Addnewitem $item, Request $request)
+   { 
+       $data = $request->validate([
+           'item_barcode' => 'required',
+           'item_name' => 'required',
+           'item_brand' => 'required'
+       ]);
+
+       $item->update($data);
+       return redirect(route('addnewitem'));
+   }
