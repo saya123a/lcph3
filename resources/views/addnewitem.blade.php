@@ -42,12 +42,11 @@
                 <a href="{{route('edit', ['item' => $item])}}">Edit</a>
             </td>
             <td>
-                <a href="{{route('delete', ['item' => $item])}}">Delete</a>
-                <!--<form method="post" action="{{route('delete', ['item' => $item])}}">-->
-               <!--     @csrf-->
-               <!--     @method('DELETE')-->
-              <!--      <button type="submit" name="submit" class="submit-button">Delete</button>-->
-             <!--   </form>-->
+                <form method="post" action="{{route('delete', ['item' => $item])}}">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit" name="submit" class="submit-button">Delete</button>
+                </form>
             </td>
         </tr>
         @endforeach
