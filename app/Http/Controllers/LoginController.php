@@ -7,12 +7,12 @@ use App\Models\Login;
 
 class LoginController extends Controller
 {
-    public function login()
+    public function loginform()
     {
         return view('login');
     }
 
-    public function authenticate(Request $request)
+    public function login(Request $request)
     {
         $credentials = $request->validate([
             'username' => 'required',
@@ -26,7 +26,7 @@ class LoginController extends Controller
         return redirect()->back()->withErrors(['msgfailed' => 'Username does not exist or the password is incorrect.']);
     }
 
-    public function signup()
+    public function signupform()
     {
         return view('signup');
     }
