@@ -41,3 +41,4 @@ class AddnewitemController extends Controller
        $item->update($data);
        return redirect(route('addnewitem'));
    }
+}
