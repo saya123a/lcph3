@@ -23,7 +23,7 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');*/
 
-Route::get('/', [LoginController::class, 'login'])->name('login');
+Route::get('/', [LoginController::class, 'login'])->name('lcph.login');
 
 Route::get('/addnewitem', [AddnewitemController::class, 'addnewitem'])->name('addnewitem');
 Route::post('/addnewitem', [AddnewitemController::class, 'addnewitems'])->name('addnewitems');
