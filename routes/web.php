@@ -19,7 +19,7 @@ use App\Http\Controllers\LoginController;
     return view('welcome');
 });
 
-Auth::routes();
+
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
@@ -32,5 +32,6 @@ Route::delete('/addnewitem/{item}/delete', [AddnewitemController::class, 'delete
 
 Route::get('/', [LoginController::class, 'loginform'])->name('login');
 Route::post('/login', [LoginController::class, 'login']);
+Auth::routes();
 Route::get('/signup', [LoginController::class, 'signupform'])->name('signup');
 Route::post('/signup', [LoginController::class, 'signup']);
