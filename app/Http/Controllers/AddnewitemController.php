@@ -8,10 +8,10 @@ use App\Models\Addnewitem;
 class AddnewitemController extends Controller
 {
     public function addnewitem()
-        {
-            $items = Addnewitem::all();
-            return view('addnewitem', ['items' => $items]);
-        }
+    {
+        $items = Addnewitem::all();
+        return view('addnewitem', ['items' => $items]);
+    }
 
    public function addnewitems(Request $request)
    {
@@ -23,5 +23,10 @@ class AddnewitemController extends Controller
 
        $add = Addnewitem::create($data);
        return redirect(route('addnewitem'));
+   }
+
+   public function edit(Addnewitem item)
+   {
+        dd($item);
    }
 }
