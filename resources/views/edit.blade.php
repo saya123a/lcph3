@@ -28,22 +28,5 @@
             </div>
             <button type="submit" name="submit" class="submit-button">Update</button>
         </form>
-
-        <!-- Display Data -->
-        <div>
-            <table>
-                @foreach($items as $item)
-                <tr>
-                    <td>{{$item->id}}</td>
-                    <td>{{$item->item_barcode}}</td>
-                    <td>{{$item->item_name}}</td>
-                    <td>{{$item->item_brand}}</td>
-                    <td>
-                        <a href="{{route('edit', ['item' => $item])}}">Edit</a>
-                    </td>
-                </tr>
-                @endforeach
-            </table>
-        </div>
     </body>
 </html>
