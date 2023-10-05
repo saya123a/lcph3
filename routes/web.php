@@ -30,4 +30,7 @@ Route::put('/addnewitem/{item}/update', [AddnewitemController::class, 'update'])
 Route::delete('/addnewitem/{item}/delete', [AddnewitemController::class, 'delete'])->name('delete');
 */
 
-Route::get('/', [LoginController::class, 'login'])->name('login');
+Route::get('/login', 'LoginController@login')->name('login');
+Route::post('/login', 'LoginController@login');
+Route::get('/signup', 'LoginController@signup')->name('signup');
+Route::post('/signup', 'LoginController@signup');
