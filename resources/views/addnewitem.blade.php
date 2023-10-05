@@ -44,8 +44,8 @@
             <td>
                 <form method="post" action="{{route('delete', ['item' => $item])}}">
                     @csrf
-                    @method('DELETE')
-                    <button type="submit" name="submit" class="submit-button">Delete</button>
+                    @method('delete')
+                    <button type="submit" name="delete" class="submit-button">Delete</button>
                 </form>
             </td>
         </tr>
