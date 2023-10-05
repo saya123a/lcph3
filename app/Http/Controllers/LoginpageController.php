@@ -7,12 +7,7 @@ use App\Models\Loginpage; // Assuming you have a 'User' model for user managemen
 use Illuminate\Support\Facades\Auth;
 
 class LoginpageController extends Controller
-{
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-    
+{    
     public function loginform()
     {
         return view('loginpage');
