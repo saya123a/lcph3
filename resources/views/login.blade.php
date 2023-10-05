@@ -40,6 +40,8 @@
 				</div>
 				<div class="form-inner">
 					<form method="post" action="{{route('login')}}" class="login">
+                        @csrf
+                        @method('POST')
 						<div class="field">
 							<input type="text" name="username" placeholder="Username" required>
 						</div>
@@ -55,6 +57,8 @@
 						</div>
 					</form>
 					<form action="{{route('signup')}}" method="post" class="signup">
+                        @csrf
+                        @method('POST')
 						<div class="field">
 							<input type="text" name="username" placeholder="Username" required>
 						</div>
