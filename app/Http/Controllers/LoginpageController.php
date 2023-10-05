@@ -8,6 +8,11 @@ use Illuminate\Support\Facades\Auth;
 
 class LoginpageController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
     public function loginform()
     {
         return view('loginpage');
@@ -23,7 +28,6 @@ class LoginpageController extends Controller
         if (Auth::attempt($credentials)) {
             return redirect(route('homepage')); // Change this to your home route
         }
-
         return redirect()->back()->withErrors(['msgfailed' => 'Username does not exist or the password is incorrect.']);
     }
 
