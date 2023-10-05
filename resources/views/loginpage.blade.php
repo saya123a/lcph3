@@ -40,7 +40,7 @@
 				</div>
 				<div class="form-inner">
 					<form method="post" action="{{route('login')}}" class="login">
-                        
+                        @csrf
 						<div class="field">
 							<input type="text" name="username" placeholder="Username" required>
 						</div>
@@ -52,11 +52,11 @@
 							<input type="submit" name="login" type="button" value="Login">
 						</div>
 						<div class="signup-link">
-							Not a member? <a href="">Signup now</a>
+							Not a member? <a href=""{{route('signup')}}"">Signup now</a>
 						</div>
 					</form>
 					<form action="{{route('signup')}}" method="post" class="signup">
-     
+                        @csrf
 						<div class="field">
 							<input type="text" name="username" placeholder="Username" required>
 						</div>
