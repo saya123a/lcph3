@@ -42,6 +42,6 @@ class LoginController extends Controller
 
         Login::create($data);
 
-        return redirect()->route('login')->with('msgsuccess', 'Successfully Registered.');
+        return redirect()->route('loginform')->with('msgsuccess', 'Successfully Registered.');
     }
 }
