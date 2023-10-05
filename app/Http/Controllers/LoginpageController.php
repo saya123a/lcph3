@@ -3,10 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Login;
+use App\Models\Loginpage;
 use Illuminate\Support\Facades\Auth;
 
-class LoginController extends Controller
+class LoginpageController extends Controller
 {
     public function loginform()
     {
