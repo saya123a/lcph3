@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AddnewitemController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\HomepageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,8 +20,6 @@ use App\Http\Controllers\LoginController;
     return view('welcome');
 });
 
-
-
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/addnewitem', [AddnewitemController::class, 'addnewitem'])->name('addnewitem');
@@ -34,5 +33,9 @@ Route::get('/', [LoginController::class, 'loginform'])->name('login');
 Route::post('/login', [LoginController::class, 'login']);
 Route::get('/signup', [LoginController::class, 'signupform'])->name('signup');
 Route::post('/signup', [LoginController::class, 'signup']);
+
+// These routes are part of Laravel's authentication scaffolding
 Auth::routes();
+
+// This route is for the homepage and protected by the 'auth' middleware
 Route::get('/homepage', [HomepageController::class, 'homepage'])->middleware('auth');
