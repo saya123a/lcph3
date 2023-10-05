@@ -9,18 +9,39 @@ class LoginController extends Controller
 {
     public function login()
     {
-        $logins = Login:all();
-        return view('login', ['logins' => $logins]);
+        return view('login');
     }
 
-    public function logins(Request $request)
+    public function authenticate(Request $request)
     {
-        $data = $request->validate([
-           'username' => 'required',
-           'password' => 'required',
+        $credentials = $request->validate([
+            'username' => 'required',
+            'password' => 'required',
         ]);
 
-       $add = Login::create($data);
-       return redirect(route('login'));
-   }
+        if (Auth::attempt($credentials)) {
+            return redirect()->route('homepage'); // Change this to your home route
+        }
+
+        return redirect()->back()->withErrors(['msgfailed' => 'Username does not exist or the password is incorrect.']);
+    }
+
+    public function signup()
+    {
+        return view('signup');
+    }
+
+    public function signup(Request $request)
+    {
+        $data = $request->validate([
+            'username' => 'required|unique:login',
+            'password' => 'required',
+        ]);
+
+        $data['password'] = bcrypt($data['password']); // Hash the password
+
+        Login::create($data);
+
+        return redirect()->route('login')->with('msgsuccess', 'Successfully Registered.');
+    }
 }
