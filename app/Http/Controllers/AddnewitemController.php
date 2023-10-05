@@ -27,6 +27,6 @@ class AddnewitemController extends Controller
 
    public function edit(Addnewitem $item)
    {
-        dd($item);
+        return view('edit', ['item' => $item]);
    }
 }
