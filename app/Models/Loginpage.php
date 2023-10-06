@@ -1,5 +1,3 @@
-<?php
-
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -12,7 +10,10 @@ class Loginpage extends Model
     protected $table = 'login';
 
     protected $fillable = [
-      'username',
-      'password'
+        'username',
+        'password',
+        'email', // Add the 'email' column for password reset
+        'token', // Add the 'token' column for password reset
+        'token_created_at', // Add the 'token_created_at' column for password reset
     ];
 }
