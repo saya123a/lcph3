@@ -35,6 +35,7 @@ class LoginpageController extends Controller
     {
         $data = $request->validate([
             'username' => 'required|unique:login',
+            'email' => 'required|email|unique:login', // Add validation for the email field
             'password' => 'required'
         ]);
 
