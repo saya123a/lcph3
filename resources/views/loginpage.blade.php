@@ -39,37 +39,40 @@
 					<div class="slider-tab"></div>
 				</div>
 				<div class="form-inner">
-					<form method="post" action="{{route('login')}}" class="login">
+                    <form method="post" action="{{route('login')}}" class="login">
+                    @csrf
+                    @method('POST')
+                    <div class="field">
+                        <input type="text" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="field">
+                        <input type="password" name="password" placeholder="Password" required>
+                    </div>
+                    <div class="field btn">
+                        <div class="btn-layer"></div>
+                        <input type="submit" name="login" type="button" value="Login">
+                    </div>
+                    <div class="signup-link">
+                        Not a member? <a href="{{route('signupform')}}">Signup now</a>
+                    </div>
+                    </form>
+                    <form action="{{route('signup')}}" method="post" class="signup">
                         @csrf
                         @method('POST')
-						<div class="field">
-							<input type="text" name="username" placeholder="Username" required>
-						</div>
-						<div class="field">
-							<input type="password" name="password" placeholder="Password" required>
-						</div>
-						<div class="field btn">
-							<div class="btn-layer"></div>
-							<input type="submit" name="login" type="button" value="Login">
-						</div>
-						<div class="signup-link">
-							Not a member? <a href="">Signup now</a>
-						</div>
-					</form>
-					<form action="{{route('signup')}}" method="post" class="signup">
-                        @csrf
-                        @method('POST')
-						<div class="field">
-							<input type="text" name="username" placeholder="Username" required>
-						</div>
-						<div class="field">
-							<input type="password" name="password" placeholder="Password" required>
-						</div>
-						<div class="field btn">
-							<div class="btn-layer"></div>
-							<input type="submit" name="signup" value="Signup">
-						</div>
-					</form>
+                        <div class="field">
+                            <input type="text" name="username" placeholder="Username" required>
+                        </div>
+                        <div class="field">
+                            <input type="email" name="email" placeholder="Email" required>
+                        </div>
+                        <div class="field">
+                            <input type="password" name="password" placeholder="Password" required>
+                        </div>
+                        <div class="field btn">
+                            <div class="btn-layer"></div>
+                            <input type="submit" name="signup" value="Signup">
+                        </div>
+                    </form>
 				</div>
 			</div>
 		</div>
