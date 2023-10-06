@@ -2,8 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AddnewitemController;
-use App\Http\Controllers\LoginpageController;
-use App\Http\Controllers\HomepageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,7 +14,7 @@ use App\Http\Controllers\HomepageController;
 |
 */
 
-/*Route::get('/', function () {
+Route::get('/', function () {
     return view('welcome');
 });
 
@@ -27,17 +25,6 @@ Route::post('/addnewitem', [AddnewitemController::class, 'addnewitems'])->name('
 Route::get('/addnewitem/{item}/edit', [AddnewitemController::class, 'edit'])->name('edit');
 Route::put('/addnewitem/{item}/update', [AddnewitemController::class, 'update'])->name('update');
 Route::delete('/addnewitem/{item}/delete', [AddnewitemController::class, 'delete'])->name('delete');
-*/
 
-Route::get('/', [LoginpageController::class, 'loginform'])->name('loginform');
-Route::post('/loginpage', [LoginpageController::class, 'login'])->name('login');
-Route::get('/loginpage', [LoginpageController::class, 'signupform'])->name('signupform');
-Route::post('/loginpage', [LoginpageController::class, 'signup'])->name('signup');
-
-// These routes are part of Laravel's authentication scaffolding
-Auth::routes();
-
-// This route is for the homepage and protected by the 'auth' middleware
-Route::get('/homepage', [HomepageController::class, 'homepage'])->middleware('auth');
 
 
