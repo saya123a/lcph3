@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AddnewitemController;
 use App\Http\Controllers\LoginpageController;
 use App\Http\Controllers\HomepageController;
+use App\Http\Controllers\ResetPasswordController;
 
 /*
 |--------------------------------------------------------------------------
