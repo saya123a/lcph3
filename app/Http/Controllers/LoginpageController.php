@@ -10,7 +10,7 @@ class LoginpageController extends Controller
 {    
     public function loginform()
     {
-        return view('loginpage');
+        return view('loginpage', ['isSignup' => false]);
     }
 
     public function login(Request $request)
@@ -28,7 +28,7 @@ class LoginpageController extends Controller
 
     public function signupform()
     {
-        return view('loginpage');
+        return view('loginpage, ['isSignup' => true]);
     }
 
     public function signup(Request $request)
