@@ -55,6 +55,7 @@
                     <div class="signup-link">
                         Not a member? <a href="{{route('signupform')}}">Signup now</a>
                     </div>
+                    <a href="{{ route('password.request') }}">Forgot your password?</a>
                     </form>
                     <form action="{{route('signup')}}" method="post" class="signup">
                         @csrf
