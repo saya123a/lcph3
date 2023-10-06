@@ -40,9 +40,6 @@ Auth::routes();
 // This route is for the homepage and protected by the 'auth' middleware
 Route::get('/homepage', [HomepageController::class, 'homepage'])->middleware('auth');
 
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ResetPasswordController;
-
 // Password reset routes
 Route::get('/forgot-password', [ResetPasswordController::class, 'showLinkRequestForm'])->name('password.request');
 Route::post('/forgot-password', [ResetPasswordController::class, 'sendResetLinkEmail'])->name('password.email');
