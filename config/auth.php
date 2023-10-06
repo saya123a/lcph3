@@ -60,17 +60,16 @@ return [
     */
 
     'providers' => [
-    'users' => [
-        'driver' => 'eloquent',
-        'model' => App\Models\Loginpage::class, // Update this to your Loginpage model
+        'users' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\User::class,
         ],
-    ],
 
         // 'users' => [
         //     'driver' => 'database',
         //     'table' => 'users',
         // ],
-    //],
+    ],
 
     /*
     |--------------------------------------------------------------------------
@@ -92,11 +91,11 @@ return [
     */
 
     'passwords' => [
-    'users' => [
-        'provider' => 'users', // Use the 'users' provider
-        'table' => 'login',    // Use the 'login' table for password resets
-        'expire' => 60,        // Token expiration time in minutes
-        'throttle' => 60,      // Throttle time between token requests in seconds
+        'users' => [
+            'provider' => 'users',
+            'table' => 'password_reset_tokens',
+            'expire' => 60,
+            'throttle' => 60,
         ],
     ],
 
