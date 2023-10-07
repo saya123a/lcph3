@@ -8,6 +8,24 @@
 		<!--External CSS-->
 		<link rel="stylesheet" href="update.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+        <style>
+        /* Alert styles */
+.alert {
+    padding: 10px 20px; /* Add padding to the alert */
+    margin-bottom: 20px; /* Add spacing between alerts */
+    border-radius: 4px; /* Rounded corners for the alert */
+}
+
+.alert-success {
+    background-color: #4CAF50; /* Background color for success message */
+    color: #fff; /* Text color for success message */
+}
+
+.alert-danger {
+    background-color: #F44336; /* Background color for error message */
+    color: #fff; /* Text color for error message */
+}
+</style>
 	</head>
 	<body>
         <nav class="navbar">
