@@ -30,7 +30,7 @@ Route::middleware(['auth'])->group(function () {
     Route::delete('/home/{item}/delete', [HomeController::class, 'delete'])->name('delete');
     Route::get('/addnewitem', [AddnewitemController::class, 'addnewitem'])->name('addnewitem');
     Route::post('/addnewitem', [AddnewitemController::class, 'addnewitems'])->name('addnewitems');
-    Route::get('/addcurrentitem', [AddnewitemController::class, 'addcurrentitem'])->name('addcurrentitem');
+    Route::get('/addcurrentitem', [AddcurrentitemController::class, 'addcurrentitem'])->name('addcurrentitem');
     
     // Add more protected routes as needed
 });
