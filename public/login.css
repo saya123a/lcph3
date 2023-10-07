@@ -78,7 +78,7 @@ input[type="radio"]{
 }
 
 #signup:checked ~ .slider-tab{
-	left: 50%;
+	left: 0%;
 }
 
 #signup:checked ~ label.signup{
