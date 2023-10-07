@@ -44,13 +44,13 @@
 					</li>
 					<li><a href="checkoutmain.php">Checkout</a></li>
 					<li><a href="{{ route('logout') }}">Logout</a></li>
-                    <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                    <li>
+                        <div class="dropdown">
+                                <a button class="dropbtn id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
-                                </a>
-
-                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                </button></a>
+                                <div class="dropdown-content" aria-labelledby="navbarDropdown">
+                                    <a href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
@@ -60,7 +60,8 @@
                                         @csrf
                                     </form>
                                 </div>
-                            </li>
+                        </div>
+                    </li>
 				</ul>
 				<div class="icon menu-btn">
 					<i class="fas fa-bars"></i>
