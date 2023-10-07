@@ -19,7 +19,7 @@
 					<div class="icon cancel-btn">
 						<i class="fas fa-times"></i>
 					</div>
-					<li><a href="home_page.php">Home</a></li>
+					<li><a href="{{ route('home') }}">Home</a></li>
 					<li>
 						<div class="dropdown">
 							<a button class="dropbtn">Update</button></a>
