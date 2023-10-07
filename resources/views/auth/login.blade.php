@@ -53,7 +53,7 @@
                                 </span>
                             @enderror
                         </div>
-                        <div class="row mb-3">
+                        
                             <div class="col-md-6 offset-md-4">
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
@@ -62,7 +62,7 @@
                                     </label>
                                 </div>
                             </div>
-                        </div><br>
+                        
                         <div class="field btn">
 						    <div class="btn-layer"></div>
 							<input type="submit" name="login" type="button" value="Login">
