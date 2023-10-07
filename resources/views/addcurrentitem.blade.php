@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Add Current Stocks</title>
+		<title>Add Current Stock</title>
 		<!--Meta Tag-->
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +10,7 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 	</head>
 	<body>
-		<nav class="navbar">
+        <nav class="navbar">
 			<div class="content">
 				<div class="logo">
 					<img class="lcph" src="img/logo_surau.png" ></a> 	
@@ -19,7 +19,7 @@
 					<div class="icon cancel-btn">
 						<i class="fas fa-times"></i>
 					</div>
-					<li><a href="home_page.php">Home</a></li>
+					<li><a href="{{ route('home') }}">Home</a></li>
 					<li>
 						<div class="dropdown">
 							<a button class="dropbtn">Update</button></a>
@@ -27,8 +27,8 @@
 								<div class="sub-dropdown">
 									<a class="sub-dropbtn">Stocks</a>
 									<div class="sub-dropdown-content">
-										<a href="addcurrentdata.html">Add Current Stocks</a>
-										<a href="addnewdata.html">Add New Stocks</a>
+										<a href="{{ route('addcurrentitem') }}">Add Current Stocks</a>
+										<a href="{{ route('addnewitem') }}">Add New Stocks</a>
 										<a href="deletecurrentdata.html">Delete Current Stocks</a>
 									</div>
 								</div>
@@ -43,7 +43,23 @@
 						</div>
 					</li>
 					<li><a href="checkoutmain.php">Checkout</a></li>
-					<li><a href="login_page.php">Logout</a></li>
+					<li>
+                        <div class="dropdown">
+                            <a button class="dropbtn id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->name }}
+                            </button></a>
+							<div class="dropdown-content">
+							    <a href="{{ route('logout') }}"
+                                    onclick="event.preventDefault();
+                                    document.getElementById('logout-form').submit();">
+                                    {{ __('Logout') }}
+                                </a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                </form>
+	                        </div>
+                        </div>
+                    </li>
 				</ul>
 				<div class="icon menu-btn">
 					<i class="fas fa-bars"></i>
