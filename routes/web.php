@@ -31,7 +31,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/addnewitem', [AddnewitemController::class, 'addnewitem'])->name('addnewitem');
     Route::post('/addnewitem', [AddnewitemController::class, 'addnewitems'])->name('addnewitems');
     Route::get('/addcurrentitem', [AddcurrentitemController::class, 'addcurrentitem'])->name('addcurrentitem');
-    Route::get('/addcurrentitem', [AddcurrentitemController::class, 'addcurrentitems'])->name('addcurrentitems');
+    Route::post('/addcurrentitem', [AddcurrentitemController::class, 'addcurrentitems'])->name('addcurrentitems');
     
     // Add more protected routes as needed
 });
