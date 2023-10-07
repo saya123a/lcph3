@@ -16,12 +16,12 @@ class DeletecurrentitemController extends Controller
     {
         $itemBarcode = $request->input('item_barcode');
 
-        // Check if the barcode exists in the database
+        // Find the first matching item
         $existingItem = Item::where('item_barcode', $itemBarcode)->first();
 
         if ($existingItem) {
             // Barcode exists, delete the first matching record
-            Item::where('item_barcode', $itemBarcode)->delete();
+            $existingItem->delete();
 
             return redirect()->back()->with('success', 'Data with barcode: ' . $itemBarcode . ' deleted successfully.');
         } else {
