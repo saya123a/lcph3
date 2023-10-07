@@ -25,6 +25,28 @@
     background-color: #F44336; /* Background color for error message */
     color: #fff; /* Text color for error message */
 }
+            /* Popup styles */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+.success-popup {
+    background-color: #4CAF50; /* Background color for success message */
+}
+
+.error-popup {
+    background-color: #F44336; /* Background color for error message */
+}
+
 </style>
 	</head>
 	<body>
@@ -84,6 +106,13 @@
 				</div>
 			</div>
 		</nav>
+        <div id="success-popup" class="popup success-popup">
+        <span class="popup-content" id="success-message"></span>
+    </div>
+
+    <div id="error-popup" class="popup error-popup">
+        <span class="popup-content" id="error-message"></span>
+    </div>
 		<div class="banner"></div>
 		<main class="container">
 			<section class="data-entry">
@@ -160,6 +189,33 @@
 			document.addEventListener("DOMContentLoaded", function() {
 				document.getElementById("item_barcode").focus();
 			});
+
+            // Show success message
+function showSuccessMessage(message) {
+    var successPopup = document.getElementById('success-popup');
+    var successMessage = document.getElementById('success-message');
+    successMessage.innerHTML = message;
+    successPopup.style.display = 'block';
+
+    // Hide the popup after 3 seconds (adjust as needed)
+    setTimeout(function() {
+        successPopup.style.display = 'none';
+    }, 3000);
+}
+
+// Show error message
+function showErrorMessage(message) {
+    var errorPopup = document.getElementById('error-popup');
+    var errorMessage = document.getElementById('error-message');
+    errorMessage.innerHTML = message;
+    errorPopup.style.display = 'block';
+
+    // Hide the popup after 3 seconds (adjust as needed)
+    setTimeout(function() {
+        errorPopup.style.display = 'none';
+    }, 3000);
+}
+
 		</script>
 	</body>
 </html>
