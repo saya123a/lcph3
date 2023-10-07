@@ -9,7 +9,7 @@ class AddnewitemController extends Controller
 {
     public function addnewitem()
     {
-        return view('addnewitem');
+    return view('addnewitem');
     }
 
     /**
