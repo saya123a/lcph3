@@ -95,6 +95,16 @@
 				<p>&copy; 2023 La Cottage Prayer Hall</p>
 			</div>
 		</div>
+        @if(session('success'))
+            <div class="alert alert-success">
+                {{ session('success') }}
+            </div>
+        @endif
+        @if(session('error'))
+             <div class="alert alert-danger">
+                {{ session('error') }}
+            </div>
+        @endif
 		<script>
 			const body = document.querySelector("body");
 			const navbar = document.querySelector(".navbar");
