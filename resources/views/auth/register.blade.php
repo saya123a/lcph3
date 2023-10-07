@@ -68,6 +68,12 @@
 						    <div class="btn-layer"></div>
 							<input type="submit" name="signup" value="Signup">
 					    </div>
+                        <div class="signup-link">
+							<br>
+                            @if (Route::has('login'))
+                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                            @endif
+						</div>
                     </form>
                 </div>
             </div>
