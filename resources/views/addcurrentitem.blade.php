@@ -70,7 +70,7 @@
 		<main class="container">
 			<section class="data-entry">
 				<h2>Scan Barcode</h2>
-				<form action="" method="POST">
+				<form action="{{ route('addcurrentitems') }}" method="POST">
                     @csrf
 					<div class="data-input">
 						<label for="item_barcode">Barcode:</label>
