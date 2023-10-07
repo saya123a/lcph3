@@ -11,7 +11,7 @@
         <style>
         /* Alert styles */
 .alert {
-    padding: 50px 100px; /* Add padding to the alert */
+    padding: 50px 10px; /* Add padding to the alert */
     margin-bottom: 20px; /* Add spacing between alerts */
     border-radius: 4px; /* Rounded corners for the alert */
     text-align: center;
