@@ -1,5 +1,3 @@
-<?php
-
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AddnewitemController;
@@ -16,17 +14,17 @@ use App\Http\Controllers\AddnewitemController;
 */
 
 Route::get('/', function () {
-    return redirect('login');
+    return redirect()->route('login');
 });
 
 Auth::routes();
 
-Route::middleware(['auth.check'])->group(function () {
+Route::middleware(['auth'])->group(function () {
     Route::get('/home', [HomeController::class, 'home'])->name('home');
     Route::post('/home', [HomeController::class, 'homes'])->name('homes');
-    Route::get('/home'/{item}/edit', [HomeController::class, 'edit'])->name('edit');
-    Route::put('/home'/{item}/update', [HomeController::class, 'update'])->name('update');
-    Route::delete('/home'/{item}/delete', [HomeController::class, 'delete'])->name('delete');
-        Route::get('/addnewitem', [HomeController::class, 'addnewitem'])->name('addnewitem');
+    Route::get('/home/{item}/edit', [HomeController::class, 'edit'])->name('edit');
+    Route::put('/home/{item}/update', [HomeController::class, 'update'])->name('update');
+    Route::delete('/home/{item}/delete', [HomeController::class, 'delete'])->name('delete');
+    Route::get('/addnewitem', [AddnewitemController::class, 'addnewitem'])->name('addnewitem');
     // Add more protected routes as needed
 });
