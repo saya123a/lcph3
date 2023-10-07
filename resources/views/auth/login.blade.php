@@ -14,6 +14,13 @@
         <!--External CSS-->
 		    <link rel="stylesheet" href="{{ asset('login.css') }}">
 		    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        
+        <!-- Include Bootstrap CSS and JavaScript -->
+            <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 		    <style>
 		    	  html,body
 		    	  {
@@ -74,6 +81,26 @@
                 </div>
             </div>
         </div>
+        <!-- Error Modal -->
+<div class="modal fade" id="errorModal" tabindex="-1" role="dialog" aria-labelledby="errorModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="errorModalLabel">Error</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Display error messages here -->
+                <div id="errorMessage"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
         <script>
 		        const loginText = document.querySelector(".title-text .login");
 		      	const loginForm = document.querySelector("form.login");
@@ -92,6 +119,17 @@
 			        	signupBtn.click();
 			        	return false;
 			    });
+            <!-- Add the following script to your Blade file -->
+    @if($errors->any())
+        var errorMessage = '<ul>';
+        @foreach ($errors->all() as $error)
+            errorMessage += '<li>{{ $error }}</li>';
+        @endforeach
+        errorMessage += '</ul>';
+        $('#errorMessage').html(errorMessage);
+        $('#errorModal').modal('show');
+    @endif
+
         </script>
 	</body>
 </html>
