@@ -14,6 +14,7 @@
     padding: 10px 20px; /* Add padding to the alert */
     margin-bottom: 20px; /* Add spacing between alerts */
     border-radius: 4px; /* Rounded corners for the alert */
+    text-align: center;
 }
 
 .alert-success {
@@ -22,7 +23,7 @@
 }
 
 .alert-danger {
-    background-color: #F44336; /* Background color for error message */
+    background-color: red; /* Background color for error message */
     color: #fff; /* Text color for error message */
 }
 </style>
