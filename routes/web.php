@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AddnewitemController;
+use App\Http\Controllers\AddcurrentitemController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,5 +30,7 @@ Route::middleware(['auth'])->group(function () {
     Route::delete('/home/{item}/delete', [HomeController::class, 'delete'])->name('delete');
     Route::get('/addnewitem', [AddnewitemController::class, 'addnewitem'])->name('addnewitem');
     Route::post('/addnewitem', [AddnewitemController::class, 'addnewitems'])->name('addnewitems');
+    Route::get('/addcurrentitem', [AddnewitemController::class, 'addcurrentitem'])->name('addcurrentitem');
+    
     // Add more protected routes as needed
 });
