@@ -10,6 +10,16 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 	</head>
 	<body>
+        @if(session('success'))
+            <div class="alert alert-success">
+                {{ session('success') }}
+            </div>
+        @endif
+        @if(session('error'))
+             <div class="alert alert-danger">
+                {{ session('error') }}
+            </div>
+        @endif
         <nav class="navbar">
 			<div class="content">
 				<div class="logo">
@@ -95,16 +105,6 @@
 				<p>&copy; 2023 La Cottage Prayer Hall</p>
 			</div>
 		</div>
-        @if(session('success'))
-            <div class="alert alert-success">
-                {{ session('success') }}
-            </div>
-        @endif
-        @if(session('error'))
-             <div class="alert alert-danger">
-                {{ session('error') }}
-            </div>
-        @endif
 		<script>
 			const body = document.querySelector("body");
 			const navbar = document.querySelector(".navbar");
