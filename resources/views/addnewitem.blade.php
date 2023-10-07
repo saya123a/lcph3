@@ -8,7 +8,6 @@
 		<!--External CSS-->
 		<link rel="stylesheet" href="update.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	</head>
 	<body>
         <nav class="navbar">
@@ -88,15 +87,6 @@
 		        	</div>
 		        	<button type="submit" name="submit" class="submit-button">Submit</button>
                 </form>
-                @if(Session::has('message'))
-                <script>
-                    swal("Message","{{Session::get('message')}}", "success"
-                         {
-                            button:true,
-                                button:"OK"
-                         });
-                </script>
-                @endif
 			</section>
 		</main>
 		<div class="nutri">
