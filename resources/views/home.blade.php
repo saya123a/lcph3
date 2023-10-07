@@ -50,7 +50,6 @@
                                     {{ Auth::user()->name }}
                             </button></a>
 							<div class="dropdown-content">
-								<div class="sub-dropdown">
 									<a href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -60,7 +59,7 @@
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
                                     </form>
-								</div>
+								
                         </div>
                         </div>
                     </li>
