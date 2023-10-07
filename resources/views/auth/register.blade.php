@@ -69,9 +69,9 @@
 							<input type="submit" name="signup" value="Signup">
 					    </div>
                         <div class="signup-link">
-							<br>
+							<br>Already a member?
                             @if (Route::has('login'))
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login now') }}</a>
                             @endif
 						</div>
                     </form>
