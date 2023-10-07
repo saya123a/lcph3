@@ -13,18 +13,32 @@ class AddnewitemController extends Controller
         return view('addnewitem', ['items' => $items]);
     }
 
-   public function addnewitems(Request $request)
-   {
-       $data = $request->validate([
-           'item_barcode' => 'required',
-           'item_name' => 'required',
-           'item_brand' => 'required'
-       ]);
+    public function addnewitems(Request $request)
+    {
+        $data = $request->validate([
+            'item_barcode' => 'required',
+            'item_name' => 'required',
+            'item_brand' => 'required'
+        ]);
 
-       $add = Addnewitem::create($data);
-       return redirect(route('addnewitem'));
+        // Check if the barcode already exists in the database
+        $existingItem = Addnewitem::where('item_barcode', $data['item_barcode'])->first();
+
+        if ($existingItem) {
+            // Barcode exists, retrieve existing details
+            $data['item_name'] = $existingItem->item_name;
+            $data['item_brand'] = $existingItem->item_brand;
+
+            // Create a new item with the existing barcode
+            Addnewitem::create($data);
+
+            return redirect(route('addnewitem'))->with('success', 'Data with barcode: ' . $data['item_barcode'] . ' added successfully.');
+        } else {
+            // Barcode does not exist, redirect back with a message
+            return redirect(route('addnewitem'))->with('error', 'Barcode not found in the database. Please add new data.');
+        }
    }
-
+    
    /** 
    public function edit(Addnewitem $item)
    {
