@@ -53,6 +53,13 @@
                                 </span>
                             @enderror
                         </div>
+                        <div class="signup-link">
+                            @if (Route::has('password.request'))
+                                <a class="btn btn-link" href="{{ route('password.request') }}">
+                                    {{ __('Forgot Your Password?') }}
+                                </a>
+                            @endif
+						</div>
                         <div class="row mb-3">
                             <div class="col-md-6 offset-md-4">
                                 <div class="form-check">
@@ -69,11 +76,6 @@
 							<input type="submit" name="login" type="button" value="Login">
                         </div>
                         <div class="signup-link">
-                            @if (Route::has('password.request'))
-                                <a class="btn btn-link" href="{{ route('password.request') }}">
-                                    {{ __('Forgot Your Password?') }}
-                                </a>
-                            @endif
 							Not a member? <a href="">Signup now</a>
 						</div>
                     </form>
