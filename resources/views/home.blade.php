@@ -43,7 +43,7 @@
 						</div>
 					</li>
 					<li><a href="checkoutmain.php">Checkout</a></li>
-					<li><a href="login_page.php">Logout</a></li>
+					<li><a href="{{ route('logout') }}">Logout</a></li>
 				</ul>
 				<div class="icon menu-btn">
 					<i class="fas fa-bars"></i>
