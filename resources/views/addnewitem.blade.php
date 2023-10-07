@@ -15,7 +15,7 @@
     margin-bottom: 20px; /* Add spacing between alerts */
     border-radius: 4px; /* Rounded corners for the alert */
     text-align: center;
-    left: 25%;
+    left: 50%;
     width: 50%;
 }
 
