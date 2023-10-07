@@ -11,11 +11,10 @@
         <style>
         /* Alert styles */
 .alert {
-    padding: 10px 20px; /* Add padding to the alert */
+    padding: 50px 100px; /* Add padding to the alert */
     margin-bottom: 20px; /* Add spacing between alerts */
     border-radius: 4px; /* Rounded corners for the alert */
     text-align: center;
-    position: absolute;
     left: 25%;
     width: 50%;
 }
