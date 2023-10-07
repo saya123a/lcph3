@@ -27,10 +27,6 @@ Route::middleware(['auth.check'])->group(function () {
     Route::get('/home'/{item}/edit', [HomeController::class, 'edit'])->name('edit');
     Route::put('/home'/{item}/update', [HomeController::class, 'update'])->name('update');
     Route::delete('/home'/{item}/delete', [HomeController::class, 'delete'])->name('delete');
+        Route::get('/addnewitem', [HomeController::class, 'addnewitem'])->name('addnewitem');
     // Add more protected routes as needed
 });
-
-
-
-
-
