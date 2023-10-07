@@ -16,10 +16,11 @@ use App\Http\Controllers\AddnewitemController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('login');
 });
 
 Auth::routes();
+
 Route::middleware(['auth.check'])->group(function () {
     Route::get('/home', [HomeController::class, 'index'])->name('home');
     Route::get('/addnewitem', [AddnewitemController::class, 'addnewitem'])->name('addnewitem');
