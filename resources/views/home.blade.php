@@ -27,7 +27,7 @@
 								<div class="sub-dropdown">
 									<a class="sub-dropbtn">Stocks</a>
 									<div class="sub-dropdown-content">
-										<a href="addcurrentdata.html">Add Current Stocks</a>
+										<a href="{{ route('addcurrentitem') }}">Add Current Stocks</a>
 										<a href="{{ route('addnewitem') }}">Add New Stocks</a>
 										<a href="deletecurrentdata.html">Delete Current Stocks</a>
 									</div>
