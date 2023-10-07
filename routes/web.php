@@ -16,7 +16,7 @@ use App\Http\Controllers\AddnewitemController;
 */
 
 Route::get('/', function () {
-    return view('login');
+    return redirect('login');
 });
 
 Auth::routes();
