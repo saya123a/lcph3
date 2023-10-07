@@ -8,33 +8,8 @@
 		<!--External CSS-->
 		<link rel="stylesheet" href="update.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-        <style>
-    .notification {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        background-color: #333; /* Background color of the notification */
-        color: #fff; /* Text color of the notification */
-        padding: 10px; /* Padding around the notification */
-        text-align: center; /* Center-align the text */
-        display: none; /* Initially hide the notification */
-    }
-</style>
 	</head>
 	<body>
-        <div id="notification" class="notification">
-            @if(session('success'))
-            <div class="alert alert-success">
-                {{ session('success') }}
-            </div>
-        @endif
-        @if(session('error'))
-             <div class="alert alert-danger">
-                {{ session('error') }}
-            </div>
-        @endif
-        </div>
         <nav class="navbar">
 			<div class="content">
 				<div class="logo">
@@ -114,6 +89,7 @@
                 </form>
 			</section>
 		</main>
+        <div id="message" class="message" style="display: none;"></div>
 		<div class="nutri">
 			<div class="content">
 				<img class="lcph" src="img/logo_surau.png">
@@ -157,19 +133,19 @@
 				document.getElementById("item_barcode").focus();
 			});
 
-            // Check if the 'notfound' query parameter is present
-const notFoundParam = getQueryParam('notfound');
-if (notFoundParam === 'true') {
-    // Display the notification message
-    const notification = document.getElementById('notification');
-    notification.innerHTML = "Barcode not found in the database. Please add new data.";
-    notification.style.display = 'block';
+            // After the form submission is processed and you want to display a message:
+const message = document.getElementById('message');
 
-    // Automatically hide the notification after a few seconds (e.g., 5 seconds)
-    setTimeout(() => {
-        notification.style.display = 'none';
-    }, 5000); // 5000 milliseconds (5 seconds)
-}
+// To display a success message:
+message.innerHTML = 'Success! The item was added.';
+message.style.color = 'green'; // Optional: Change text color
+message.style.display = 'block'; // Show the message
+
+// To display an error message:
+message.innerHTML = 'Error! Something went wrong.';
+message.style.color = 'red'; // Optional: Change text color
+message.style.display = 'block'; // Show the message
+
 		</script>
 	</body>
 </html>
