@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head>
-	    <title>Login Page</title>
+	    <title>Signup Page</title>
 		    
         <!--Meta Tag-->
 		    <meta charset="utf-8">
@@ -24,15 +24,16 @@
 		        		background: url("img/surau.jpg") no-repeat center;
 			        	background-size: cover;
 			      }
-		    </style>
+	        </style>
     </head>
     <body>
         <div class="wrapper">
-			      <div class="title signup">
-					      Signup Form
-				    </div>
-			  </div>
-        <div class="form-container">
+            <div class="title-text">
+		        <div class="title signup">
+			          Signup Form
+	            </div>
+            </div>
+            <div class="form-container">
   			    <div class="form-inner">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
@@ -68,10 +69,11 @@
                             <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                         </div>
                         <div class="field btn">
-							              <div class="btn-layer"></div>
-							              <input type="submit" name="signup" value="Signup">
-						            </div>
+						    <div class="btn-layer"></div>
+							<input type="submit" name="signup" value="Signup">
+					    </div>
                     </form>
+                </div>
             </div>
         </div>
     </body>
