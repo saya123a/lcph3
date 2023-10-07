@@ -15,6 +15,7 @@
     margin-bottom: 20px; /* Add spacing between alerts */
     border-radius: 4px; /* Rounded corners for the alert */
     text-align: center;
+    width: 50%;
 }
 
 .alert-success {
