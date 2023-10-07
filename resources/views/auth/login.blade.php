@@ -62,7 +62,7 @@
                                     </label>
                                 </div>
                             </div>
-                        </div>
+                        </div><br>
                         <div class="field btn">
 						    <div class="btn-layer"></div>
 							<input type="submit" name="login" type="button" value="Login">
