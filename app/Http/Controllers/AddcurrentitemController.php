@@ -34,7 +34,7 @@ class AddcurrentitemController extends Controller
             return redirect()->back()->with('success', 'Data with barcode: ' . $itemBarcode . ' added successfully.');
         } else {
             // Barcode does not exist, flash an error message and redirect
-            return redirect()->route('addcurrentitem')->with('error', 'Barcode: ' . $itemBarcode . ' does not exist in the database. Please choose Add New Stocks to add the item');
+            return redirect()->route('addcurrentitem')->with('error', 'Barcode: ' . $itemBarcode . ' does not exist in the database. Please choose Add New Stocks to add the item.');
         }
     }
 }
