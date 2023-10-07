@@ -60,7 +60,7 @@
                         <div class="signup-link">
                             @if (Route::has('password.request'))
                                 <a class="btn btn-link" href="{{ route('password.request') }}">
-                                    {{ __('Forgot Your Password?') }}
+                                    {{ __('Forgot Your Password?') }}<br>
                                 </a>
                             @endif
 							Not a member? <a href="">Signup now</a>
