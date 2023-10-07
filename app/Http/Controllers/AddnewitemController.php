@@ -25,7 +25,7 @@ class AddnewitemController extends Controller
         $existingItem = Addnewitem::where('item_barcode', $data['item_barcode'])->first();
 
         if ($existingItem) {
-            // Barcode already exists, redirect to another page with a message
+            // Barcode already exists, redirect to the same page with an error message
             return redirect(route('addnewitem'))->with('error', 'Barcode already exists in the database. Please choose Add Current Stocks to add the item.');
         } else {
             // Barcode does not exist, insert the data
@@ -35,6 +35,7 @@ class AddnewitemController extends Controller
 
             Addnewitem::create($data);
 
+            // Redirect to the same page with a success message
             return redirect(route('addnewitem'))->with('success', 'New stock with barcode: ' . $data['item_barcode'] . ' inserted successfully!');
         }
     }
