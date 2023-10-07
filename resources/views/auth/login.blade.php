@@ -53,6 +53,17 @@
                                 </span>
                             @enderror
                         </div>
+                        <div class="row mb-3">
+                            <div class="col-md-6 offset-md-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+
+                                    <label class="form-check-label" for="remember">
+                                        {{ __('Remember Me') }}
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
                         <div class="field btn">
 						    <div class="btn-layer"></div>
 							<input type="submit" name="login" type="button" value="Login">
@@ -75,19 +86,19 @@
 		      	const loginBtn = document.querySelector("label.login");
 		      	const signupBtn = document.querySelector("label.signup");
 		      	const signupLink = document.querySelector("form .signup-link a");
-			      signupBtn.onclick = (()=>{
+			    signupBtn.onclick = (()=>{
 			        	loginForm.style.marginLeft = "-50%";
 			        	loginText.style.marginLeft = "-50%";
 		      	});
-			      loginBtn.onclick = (()=>{
+			    loginBtn.onclick = (()=>{
 			        	loginForm.style.marginLeft = "0%";
 			        	loginText.style.marginLeft = "0%";
-			      });
-			      signupLink.onclick = (()=>{
+			    });
+			    signupLink.onclick = (()=>{
 			        	signupBtn.click();
 			        	return false;
-			      });
-		    </script>
-	  </body>
+			    });
+        </script>
+	</body>
 </html>
 @endsection
