@@ -16,7 +16,6 @@
     border-radius: 4px; /* Rounded corners for the alert */
     text-align: center;
     position: absolute;
-    top: 50%;
     left: 25%;
     width: 50%;
 }
