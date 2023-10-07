@@ -143,6 +143,20 @@
 			document.addEventListener("DOMContentLoaded", function() {
 				document.getElementById("item_barcode").focus();
 			});
+
+            // Check if the 'notfound' query parameter is present
+const notFoundParam = getQueryParam('notfound');
+if (notFoundParam === 'true') {
+    // Display the notification message
+    const notification = document.getElementById('notification');
+    notification.innerHTML = "Barcode not found in the database. Please add new data.";
+    notification.style.display = 'block';
+
+    // Automatically hide the notification after a few seconds (e.g., 5 seconds)
+    setTimeout(() => {
+        notification.style.display = 'none';
+    }, 5000); // 5000 milliseconds (5 seconds)
+}
 		</script>
 	</body>
 </html>
