@@ -70,8 +70,8 @@
 		<main>
 			<h2>Current Stocks</h2>
 			<div class="bar-grid">
-<!--                
-    <table>
+              
+    <!--  <table>
         @foreach($items as $item)
         <tr>
             <td>{{$item->id}}</td>
@@ -90,8 +90,8 @@
             </td>
         </tr>
         @endforeach
-    </table>
--->
+    </table>-->
+
 			</div>
 		</main>
 		<main class="container">
