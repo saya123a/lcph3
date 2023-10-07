@@ -1,4 +1,6 @@
-use Illuminate\Support\Facades\Route;
+<?php
+
+Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AddnewitemController;
 
@@ -19,7 +21,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::middleware(['auth.check'])->group(function () {
+Route::middleware(['auth'])->group(function () {
     Route::get('/home', [HomeController::class, 'home'])->name('home');
     Route::post('/home', [HomeController::class, 'homes'])->name('homes');
     Route::get('/home/{item}/edit', [HomeController::class, 'edit'])->name('edit');
