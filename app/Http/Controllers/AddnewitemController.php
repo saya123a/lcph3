@@ -26,8 +26,7 @@ class AddnewitemController extends Controller
 
         if ($existingItem) {
             // Barcode already exists, redirect to another page with a message
-            //return redirect(route('addnewitem'))->with('error', 'Barcode already exists in the database. Please choose Add Current Stocks to add the item.');
-            return back()->with('message', 'Barcode already exists in the database. Please choose Add Current Stocks to add the item.');
+            return redirect(route('addnewitem'))->with('error', 'Barcode already exists in the database. Please choose Add Current Stocks to add the item.');
         } else {
             // Barcode does not exist, insert the data
             $data['item_name'] = ucwords($data['item_name']);
