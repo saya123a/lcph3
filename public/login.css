@@ -77,10 +77,6 @@ input[type="radio"]{
 	display: none;
 }
 
-#signup:checked ~ .slider-tab{
-	left: 100%;
-}
-
 #signup:checked ~ label.signup{
 	color: #fff;
 	cursor: default;
