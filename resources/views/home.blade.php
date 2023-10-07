@@ -71,17 +71,17 @@
 			<h2>Current Stocks</h2>
 			<div class="bar-grid">
                 @if(count($stockItems) > 0)
-    @foreach($stockItems as $stockItem)
-        <div class="bar-container">
-            <div class="item-number">{{ $stockItem->quantity }}</div>
-            <div class="bar" style="height: {{ $stockItem->quantity }}px;"></div>
-            <div class="item-name">{{ $stockItem->item_name }}</div>
-            <div class="item-brand">{{ $stockItem->item_brand }}</div>
-        </div>
-    @endforeach
-@else
-    <p>No stock data available.</p>
-@endif
+                    @foreach($stockItems as $stockItem)
+                        <div class="bar-container">
+                            <div class="item-number">{{ $stockItem->quantity }}</div>
+                            <div class="bar" style="height: {{ $stockItem->quantity }}px;"></div>
+                            <div class="item-name">{{ $stockItem->item_name }}</div>
+                            <div class="item-brand">{{ $stockItem->item_brand }}</div>
+                        </div>
+                    @endforeach
+                @else
+                    <p>No stock data available.</p>
+                @endif
 			</div>
 		</main>
 		<main class="container">
