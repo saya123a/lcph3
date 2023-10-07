@@ -11,12 +11,6 @@
 	color: #fff;
 }
 
-/* Center-align the label */
-.form-check label {
-    display: flex;
-    align-items: center;
-}
-
 .wrapper{
 	overflow: hidden;
 	max-width: 390px;
