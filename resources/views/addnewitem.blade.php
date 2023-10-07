@@ -89,7 +89,6 @@
                 </form>
 			</section>
 		</main>
-        <div id="message" class="message" style="display: none;"></div>
 		<div class="nutri">
 			<div class="content">
 				<img class="lcph" src="img/logo_surau.png">
@@ -132,20 +131,6 @@
 			document.addEventListener("DOMContentLoaded", function() {
 				document.getElementById("item_barcode").focus();
 			});
-
-            // After the form submission is processed and you want to display a message:
-const message = document.getElementById('message');
-
-// To display a success message:
-message.innerHTML = 'Success! The item was added.';
-message.style.color = 'green'; // Optional: Change text color
-message.style.display = 'block'; // Show the message
-
-// To display an error message:
-message.innerHTML = 'Error! Something went wrong.';
-message.style.color = 'red'; // Optional: Change text color
-message.style.display = 'block'; // Show the message
-
 		</script>
 	</body>
 </html>
