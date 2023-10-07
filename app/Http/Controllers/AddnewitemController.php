@@ -9,6 +9,12 @@ class AddnewitemController extends Controller
 {
     public function addnewitem()
     {
+        return view('addnewitem');
+    }
+
+    /**
+    public function addnewitem()
+    {
         $items = Addnewitem::all();
         return view('addnewitem', ['items' => $items]);
     }
@@ -46,5 +52,5 @@ class AddnewitemController extends Controller
    {
        $item->delete();
        return redirect(route('addnewitem'));
-   }
+   }**/
 }
