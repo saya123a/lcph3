@@ -46,6 +46,16 @@
 					<li><a href="{{ route('logout') }}">Logout</a></li>
                     <li>
                         <div class="dropdown">
+                            <a button class="dropbtn">Update</button></a>
+							<div class="dropdown-content">
+								<div class="sub-dropdown">
+									<a class="sub-dropbtn"></a>
+									<div class="sub-dropdown-content">
+										<a href="addcurrentdata.html">Add Current Stocks</a>
+										<a href="addnewdata.html">Add New Stocks</a>
+										<a href="deletecurrentdata.html">Delete Current Stocks</a>
+									</div>
+								</div>
                                 <a button class="dropbtn id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
                                 </button></a>
