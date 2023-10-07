@@ -28,5 +28,6 @@ Route::middleware(['auth'])->group(function () {
     Route::put('/home/{item}/update', [HomeController::class, 'update'])->name('update');
     Route::delete('/home/{item}/delete', [HomeController::class, 'delete'])->name('delete');
     Route::get('/addnewitem', [AddnewitemController::class, 'addnewitem'])->name('addnewitem');
+    Route::post('/addnewitem', [AddnewitemController::class, 'addnewitems'])->name('addnewitems');
     // Add more protected routes as needed
 });
