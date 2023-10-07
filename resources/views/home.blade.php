@@ -70,48 +70,18 @@
 		<main>
 			<h2>Current Stocks</h2>
 			<div class="bar-grid">
-                <div class="bar-container">
-    <div class="item-number">Quantity</div>
-    <div class="bar" style="height: Quantity;"></div>
-    <div class="item-name">Item Name</div>
-    <div class="item-brand">Item Brand</div>
-</div>
-
-<table>
-    @if(count($items) > 0)
-        <tr>
-            <th>ID</th>
-            <th>Barcode</th>
-            <th>Name</th>
-            <th>Brand</th>
-            <th>Edit</th>
-            <th>Delete</th>
-        </tr>
-        @foreach($items as $item)
-        <tr>
-            <td>{{ $item->id }}</td>
-            <td>{{ $item->item_barcode }}</td>
-            <td>{{ $item->item_name }}</td>
-            <td>{{ $item->item_brand }}</td>
-            <td>
-                <a href="{{ route('edit', ['item' => $item]) }}" class="edit-link">Edit</a>
-            </td>
-            <td>
-                <form method="post" action="{{ route('delete', ['item' => $item]) }}">
-                    @csrf
-                    @method('DELETE')
-                    <button type="submit" name="submit" class="submit-button">Delete</button>
-                </form>
-            </td>
-        </tr>
-        @endforeach
-    @else
-        <tr>
-            <td colspan="6">No data available.</td>
-        </tr>
-    @endif
-</table>
-
+                @if(count($items) > 0)
+                    @foreach($items as $item)
+                        <div class="bar-container">
+                            <div class="item-number">{{ $item->id }}</div>
+                            <div class="bar" style="height: Quantity;"></div>
+                            <div class="item-name">{{ $item->item_name }}</div>
+                            <div class="item-brand">{{ $item->item_brand }}</div>
+                        </div>
+                    @endforeach
+                @else
+                    <p>No data available.</p>
+                @endif
 			</div>
 		</main>
 		<main class="container">
