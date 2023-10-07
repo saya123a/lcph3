@@ -43,7 +43,23 @@
 						</div>
 					</li>
 					<li><a href="checkoutmain.php">Checkout</a></li>
-					<li><a href="login_page.php">Logout</a></li>
+					<li>
+                        <div class="dropdown">
+                            <a button class="dropbtn id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->name }}
+                            </button></a>
+							<div class="dropdown-content">
+							    <a href="{{ route('logout') }}"
+                                    onclick="event.preventDefault();
+                                    document.getElementById('logout-form').submit();">
+                                    {{ __('Logout') }}
+                                </a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                </form>
+	                        </div>
+                        </div>
+                    </li>
 				</ul>
 				<div class="icon menu-btn">
 					<i class="fas fa-bars"></i>
