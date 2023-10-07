@@ -65,7 +65,7 @@
 							<input type="submit" name="login" type="button" value="Login">
                         </div>
                         <div class="signup-link">
-							Not a member? <a href="">Signup now</a>
+							<br><br>Not a member? <a href="">Signup now</a>
 						</div>
                     </form>
                 </div>
