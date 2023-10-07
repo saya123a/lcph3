@@ -78,6 +78,16 @@
 					</div>
 					<button type="submit" name="submit" class="submit-button">Submit</button>
 				</form>
+                @if(session('success'))
+                    <div class="alert alert-success">
+                        {{ session('success') }}
+                    </div>
+                @endif
+                @if(session('error'))
+                      <div class="alert alert-danger">
+                        {{ session('error') }}
+                    </div>
+                @endif
 			</section>
 		</main>
 		<div class="nutri">
