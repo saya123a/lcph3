@@ -34,7 +34,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/addcurrentitem', [AddcurrentitemController::class, 'addcurrentitem'])->name('addcurrentitem');
     Route::post('/addcurrentitem', [AddcurrentitemController::class, 'addcurrentitems'])->name('addcurrentitems');
     Route::get('/deletecurrentitem', [DeletecurrentitemController::class, 'deletecurrentitem'])->name('deletecurrentitem');
-    Route::post('/deletecurrentitem', [DeleteCurrentItemController::class, 'deletecurrentitems'])->name('deletecurrentitems');
+    Route::post('/deletecurrentitem', [DeletecurrentitemController::class, 'deletecurrentitems'])->name('deletecurrentitems');
     
     // Add more protected routes as needed
 });
