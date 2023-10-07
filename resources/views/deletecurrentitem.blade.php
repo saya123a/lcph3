@@ -70,14 +70,24 @@
 		<main class="container">
 			<section class="data-entry">
 				<h2>Scan Barcode</h2>
-				<form action="" method="POST">
-          @csrf
+				<form action="{{ route('deletecurrentitems') }}" method="POST">
+                    @csrf
 					<div class="data-input">
 						<label for="item_barcode">Barcode:</label>
 						<input type="text" id="item_barcode" name="item_barcode" required>
 					</div>
 					<button type="submit" name="submit" class="submit-button">Delete</button>
 				</form>
+                @if(session('success'))
+                    <div class="alert alert-success">
+                        {{ session('success') }}
+                    </div>
+                @endif
+                @if(session('error'))
+                    <div class="alert alert-danger">
+                        {{ session('error') }}
+                    </div>
+                @endif
 			</section>
 		</main>
 		<div class="nutri">
