@@ -35,8 +35,8 @@
 		    </div>
             <div class="form-container">
 				<div class="slide-controls">
-			    	<input type="radio"  id="login" checked>
-			        <label for="login" login">Login</label>
+			    	<input type="radio" name="slide" id="login" checked>
+			        <label for="login" class="slide" login">Login</label>
                     <div class="slider-tab"></div>
 				</div>
                 <div class="form-inner">
