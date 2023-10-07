@@ -70,7 +70,8 @@
 		<main class="container">
 			<section class="data-entry">
 				<h2>Scan Barcode</h2>
-				<form action="addcurrentdata.php" method="POST">
+				<form action="" method="POST">
+                    @csrf
 					<div class="data-input">
 						<label for="item_barcode">Barcode:</label>
 						<input type="text" id="item_barcode" name="item_barcode" required>
