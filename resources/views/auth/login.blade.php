@@ -81,26 +81,12 @@
                 </div>
             </div>
         </div>
-        <!-- Error Modal -->
+        <!-- Remove the Bootstrap modal section -->
+<!-- Error Modal -->
 <div class="modal fade" id="errorModal" tabindex="-1" role="dialog" aria-labelledby="errorModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="errorModalLabel">Error</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <!-- Display error messages here -->
-                <div id="errorMessage"></div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            </div>
-        </div>
-    </div>
+    <!-- Modal content here -->
 </div>
+
         <script>
 		        const loginText = document.querySelector(".title-text .login");
 		      	const loginForm = document.querySelector("form.login");
@@ -121,13 +107,11 @@
 			    });
             <!-- Add the following script to your Blade file -->
     @if($errors->any())
-        var errorMessage = '<ul>';
+        var errorMessage = '';
         @foreach ($errors->all() as $error)
-            errorMessage += '<li>{{ $error }}</li>';
+            errorMessage += '{{ $error }}\n';
         @endforeach
-        errorMessage += '</ul>';
-        $('#errorMessage').html(errorMessage);
-        $('#errorModal').modal('show');
+        alert(errorMessage);
     @endif
 
         </script>
