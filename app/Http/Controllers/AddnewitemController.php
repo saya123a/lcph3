@@ -25,19 +25,19 @@ class AddnewitemController extends Controller
         $existingItem = Addnewitem::where('item_barcode', $data['item_barcode'])->first();
 
         if ($existingItem) {
-            // Barcode exists, retrieve existing details
-            $data['item_name'] = $existingItem->item_name;
-            $data['item_brand'] = $existingItem->item_brand;
+            // Barcode already exists, redirect to another page with a message
+            return redirect(route('addnewitem'))->with('error', 'Barcode already exists in the database. Please choose Add Current Stocks to add the item.');
+        } else {
+            // Barcode does not exist, insert the data
+            $data['item_name'] = ucwords($data['item_name']);
+            $data['item_brand'] = ucwords($data['item_brand']);
+            $data['item_datereg'] = now();
 
-            // Create a new item with the existing barcode
             Addnewitem::create($data);
 
-            return redirect(route('addnewitem'))->with('success', 'Data with barcode: ' . $data['item_barcode'] . ' added successfully.');
-        } else {
-            // Barcode does not exist, redirect back with a message
-            return redirect(route('addnewitem'))->with('error', 'Barcode not found in the database. Please add new data.');
+            return redirect(route('addnewitem'))->with('success', 'New stock with barcode: ' . $data['item_barcode'] . ' inserted successfully!');
         }
-   }
+    }
     
    /** 
    public function edit(Addnewitem $item)
