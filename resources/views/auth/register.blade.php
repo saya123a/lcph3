@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head>
-	    <title>Signup Page</title>
+	    <title>Signup</title>
 		    
         <!--Meta Tag-->
 		    <meta charset="utf-8">
