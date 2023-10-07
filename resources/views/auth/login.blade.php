@@ -67,9 +67,7 @@
                         <div class="signup-link">
 							<br>Not a member?
                             @if (Route::has('register'))
-                                <li class="nav-item">
                                     <a class="nav-link" href="{{ route('register') }}">{{ __('Signup now') }}</a>
-                                </li>
                             @endif
 						</div>
                     </form>
