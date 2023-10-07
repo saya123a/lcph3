@@ -11,4 +11,31 @@ class AddcurrentitemController extends Controller
     {
         return view('addcurrentitem');
     }
+
+    public function addcurrentitems(Request $request)
+    {
+        $itemBarcode = $request->input('item_barcode');
+
+        // Check if the barcode already exists in the database
+        $existingItem = Item::where('item_barcode', $itemBarcode)->first();
+
+        if ($existingItem) {
+            // Barcode exists, retrieve existing details
+            $itemName = $existingItem->item_name;
+            $itemBrand = $existingItem->item_brand;
+
+            // Add new data with the existing barcode
+            $itemDateReg = now(); // Current date and time
+            Item::create([
+                'item_barcode' => $itemBarcode,
+                'item_name' => $itemName,
+                'item_brand' => $itemBrand,
+            ]);
+
+            return redirect()->back()->with('success', 'Data with barcode: ' . $itemBarcode . ' added successfully.');
+        } else {
+            // Barcode does not exist, redirect to another page with a query parameter
+            return redirect()->route('addcurrentitem')('error', 'Barcode: ' . $itemBarcode . ' does not exist in the database. Please choose Add New Stocks to add the item');
+        }
+    }
 }
