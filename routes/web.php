@@ -22,12 +22,11 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::middleware(['auth.check'])->group(function () {
-    Route::get('/home', [HomeController::class, 'index'])->name('home');
-    Route::get('/addnewitem', [AddnewitemController::class, 'addnewitem'])->name('addnewitem');
-    Route::post('/addnewitem', [AddnewitemController::class, 'addnewitems'])->name('addnewitems');
-    Route::get('/addnewitem/{item}/edit', [AddnewitemController::class, 'edit'])->name('edit');
-    Route::put('/addnewitem/{item}/update', [AddnewitemController::class, 'update'])->name('update');
-    Route::delete('/addnewitem/{item}/delete', [AddnewitemController::class, 'delete'])->name('delete');
+    Route::get('/home', [HomeController::class, 'home'])->name('home');
+    Route::post('/home', [HomeController::class, 'homes'])->name('homes');
+    Route::get('/home'/{item}/edit', [HomeController::class, 'edit'])->name('edit');
+    Route::put('/home'/{item}/update', [HomeController::class, 'update'])->name('update');
+    Route::delete('/home'/{item}/delete', [HomeController::class, 'delete'])->name('delete');
     // Add more protected routes as needed
 });
 
