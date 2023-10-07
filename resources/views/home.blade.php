@@ -43,7 +43,6 @@
 						</div>
 					</li>
 					<li><a href="checkoutmain.php">Checkout</a></li>
-					<li><a href="{{ route('logout') }}">Logout</a></li>
                     <li>
                         <div class="dropdown">
                             <a button class="dropbtn id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
