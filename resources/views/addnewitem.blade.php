@@ -17,7 +17,8 @@
     text-align: center;
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 25%;
+    width: 50%;
 }
 
 .alert-success {
