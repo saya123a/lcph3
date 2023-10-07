@@ -73,8 +73,8 @@
                 @if(count($items) > 0)
                     @foreach($items as $item)
                         <div class="bar-container">
-                            <div class="item-number">{{ $item->id }}</div>
-                            <div class="bar" style="height: Quantity;"></div>
+                            <div class="item-number">{{ $item->quantity }}</div>
+                            <div class="bar" style="height: {{ $item->quantity }}px;"></div>
                             <div class="item-name">{{ $item->item_name }}</div>
                             <div class="item-brand">{{ $item->item_brand }}</div>
                         </div>
