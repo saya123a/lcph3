@@ -17,7 +17,7 @@ class DeletecurrentitemController extends Controller
         $itemBarcode = $request->input('item_barcode');
 
         // Find the first matching item
-        $existingItem = Item::where('item_barcode', $itemBarcode)->first();
+        $existingItem = Deletecurrentitem::where('item_barcode', $itemBarcode)->first();
 
         if ($existingItem) {
             // Barcode exists, delete the first matching record
