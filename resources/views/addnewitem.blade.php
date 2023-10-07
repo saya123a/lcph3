@@ -8,6 +8,19 @@
 		<!--External CSS-->
 		<link rel="stylesheet" href="update.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+        <style>
+    .notification {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: #333; /* Background color of the notification */
+        color: #fff; /* Text color of the notification */
+        padding: 10px; /* Padding around the notification */
+        text-align: center; /* Center-align the text */
+        display: none; /* Initially hide the notification */
+    }
+</style>
 	</head>
 	<body>
         <div id="notification" class="notification">
