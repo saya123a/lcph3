@@ -70,6 +70,28 @@
 		<main>
 			<h2>Current Stocks</h2>
 			<div class="bar-grid">
+                
+    <table>
+        @foreach($items as $item)
+        <tr>
+            <td>{{$item->id}}</td>
+            <td>{{$item->item_barcode}}</td>
+            <td>{{$item->item_name}}</td>
+            <td>{{$item->item_brand}}</td>
+            <td>
+                <a href="{{route('edit', ['item' => $item])}}">Edit</a>
+            </td>
+            <td>
+                <form method="post" action="{{route('delete', ['item' => $item])}}">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit" name="submit" class="submit-button">Delete</button>
+                </form>
+            </td>
+        </tr>
+        @endforeach
+    </table>
+
 			</div>
 		</main>
 		<main class="container">
