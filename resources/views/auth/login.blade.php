@@ -12,7 +12,7 @@
 		    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 		    
         <!--External CSS-->
-		    <link rel="stylesheet" href="login_page.css">
+		    <link rel="stylesheet" href="{{ asset('login_page.css') }}">
 		    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 		    <style>
 		    	  html,body
@@ -25,20 +25,20 @@
 			        	background-size: cover;
 			      }
 		    </style>
-	  </head>
+    </head>
     <body>	
-		    <div class="wrapper">
-		      	<div class="title-text">
-			        	<div class="title login">
-		          			Login Form
-			        	</div>
-			      </div>
+	    <div class="wrapper">
+		  	<div class="title-text">
+		       	<div class="title login">
+		   			Login Form
+		       	</div>
+		    </div>
             <div class="form-container">
-				        <div class="slide-controls">
-				          	<input type="radio" name="slide" id="login" checked>
-					          <label for="login" class="slide login">Login</label>
-					          <div class="slider-tab"></div>
-				        </div>
+				<div class="slide-controls">
+			    	<input type="radio" name="slide" id="login" checked>
+			        <label for="login" class="slide login">Login</label>
+			        <div class="slider-tab"></div>
+				</div>
                 <div class="form-inner">
                     <form method="POST" action="{{ route('login') }}" class="login">
                         @csrf
@@ -49,7 +49,7 @@
                                     <strong>{{ $message }}</strong>
                                 </span>
                             @enderror
-						            </div>
+						</div>
                         <div class="field">
                             <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
 						                @error('password')
