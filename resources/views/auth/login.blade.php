@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head>
-	    	<title>Login Page</title>
+	    <title>Login Page</title>
 		    
         <!--Meta Tag-->
 		    <meta charset="utf-8">
