@@ -12,7 +12,7 @@ class Addnewreceiver extends Model
     protected $table = 'receiver';
 
     protected $fillable = [
-      'ic',
-      'name'
+      'receiver_ic',
+      'receiver_name'
     ];
 }
