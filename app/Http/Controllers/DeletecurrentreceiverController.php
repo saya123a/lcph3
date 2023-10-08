@@ -15,6 +15,7 @@ class DeletecurrentreceiverController extends Controller
     public function deletecurrentreceivers(Request $request)
     {
         $receiverIc = $request->input('receiver_ic');
+        $message = '';
 
         // Find the first matching item
         $existingReceiver = Deletecurrentreceiver::where('receiver_ic', $receiverIc)->first();
