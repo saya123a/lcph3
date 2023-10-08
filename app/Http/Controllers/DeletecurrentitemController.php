@@ -26,7 +26,7 @@ class DeletecurrentitemController extends Controller
             return redirect()->back()->with('success', 'Data with barcode: ' . $itemBarcode . ' deleted successfully.');
         } else {
             // Barcode does not exist, show a notification
-            return redirect()->route('deletecurrentitem')->with('error', 'Barcode: ' . $itemBarcode . ' not found in the database.');
+            return redirect()->route('deletecurrentitem')->with('error', 'Barcode: ' . $itemBarcode . ' does not exist.');
         }
     }
 }
