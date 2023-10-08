@@ -45,7 +45,7 @@
 					<li><a href="{{ route('checkout') }}">Checkout</a></li>
                     <li>
                         <div class="dropdown">
-                            <a class="dropbtn nav-link dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            <a class="dropbtn" class="nav-link dropdown-toggle" role="button" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 {{ Auth::user()->name }}
                             </a>
 							<div class="dropdown-content">
