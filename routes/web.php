@@ -29,12 +29,12 @@ Auth::routes();
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/home', [HomeController::class, 'home'])->name('home');
-    /*Route::get('/home', [ReceiverController::class, 'getreceivers'])->name('getreceivers');*/
+    /**Route::get('/home', [ReceiverController::class, 'getreceivers'])->name('getreceivers');
 
     Route::post('/home', [HomeController::class, 'homes'])->name('homes');
     Route::get('/home/{item}/edit', [HomeController::class, 'edit'])->name('edit');
     Route::put('/home/{item}/update', [HomeController::class, 'update'])->name('update');
-    Route::delete('/home/{item}/delete', [HomeController::class, 'delete'])->name('delete');
+    Route::delete('/home/{item}/delete', [HomeController::class, 'delete'])->name('delete');**/
     
     Route::get('/addnewitem', [AddnewitemController::class, 'addnewitem'])->name('addnewitem');
     Route::post('/addnewitem', [AddnewitemController::class, 'addnewitems'])->name('addnewitems');
