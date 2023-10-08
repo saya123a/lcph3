@@ -6,6 +6,7 @@ use App\Http\Controllers\AddnewitemController;
 use App\Http\Controllers\AddcurrentitemController;
 use App\Http\Controllers\DeletecurrentitemController;
 use App\Http\Controllers\AddnewreceiverController;
+use App\Http\Controllers\DeletecurrentreceiverController;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,6 +39,7 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/deletecurrentitem', [DeletecurrentitemController::class, 'deletecurrentitems'])->name('deletecurrentitems');
     Route::get('/addnewreceiver', [AddnewreceiverController::class, 'addnewreceiver'])->name('addnewreceiver');
     Route::post('/addnewreceiver', [AddnewreceiverController::class, 'addnewreceivers'])->name('addnewreceivers');
-    
+    Route::get('/deletecurrentreceiver', [DeletecurrentreceiverController::class, 'deletecurrentreceiver'])->name('deletecurrentreceiver');
+    Route::post('/deletecurrentreceiver', [DeletecurrentreceiverController::class, 'deletecurrentreceivers'])->name('deletecurrentreceivers'); 
     // Add more protected routes as needed
 });
