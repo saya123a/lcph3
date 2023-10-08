@@ -16,8 +16,8 @@ class AddnewreceiverController extends Controller
     public function addnewreceivers(Request $request)
     {
         $data = $request->validate([
-            'receiver_ic' => 'required|numeric|digits:12|unique:receiver', // Adjust the table name if needed
-            'receiver_name' => 'required|alpha|max:255' // Adjust maximum length and format as needed
+            'receiver_ic' => 'required', //|numeric|digits:12|unique:receiver  Adjust the table name if needed
+            'receiver_name' => 'required' //|alpha|max:255  Adjust maximum length and format as needed
         ]);
 
         // Check if the receiver already exists in the database
