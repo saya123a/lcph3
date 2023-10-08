@@ -70,15 +70,15 @@
 		<main class="container">
 			<section class="delete-receiver">
 				<h2>Enter IC</h2>
-				<form action="{{ route('deletecurrentreceivers') }" method="POST">
-          @csrf
+				<form action="{{ route('deletecurrentreceivers') }}" method="POST">
+                    @csrf
 					<div class="data-input">
 						<label for="receiver_ic">IC:</label>
 						<input type="text" id="receiver_ic" name="receiver_ic" pattern="[0-9]{12}" title="Receiver IC must be exactly 12 numeric characters." required>
 					</div>
 					<button type="submit" name="submit" class="submit-button">Delete</button>
 				</form>
-        @if(session('success'))
+                @if(session('success'))
                     <div class="alert alert-success">
                         {{ session('success') }}
                     </div>
