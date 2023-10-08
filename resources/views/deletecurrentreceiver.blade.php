@@ -36,7 +36,7 @@
 									<a class="sub-dropbtn">Receiver</a>
 									<div class="sub-dropdown-content">
 										<a href="{{ route('addnewreceiver') }}">Add New Receiver</a>
-										<a href="{{ route('deletecurrentreceiver') }">Delete Current Receiver</a>
+										<a href="{{ route('deletecurrentreceiver') }}">Delete Current Receiver</a>
 									</div>
 								</div>
 							</div>	
