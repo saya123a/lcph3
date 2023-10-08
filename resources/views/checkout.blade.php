@@ -70,21 +70,26 @@
 		<main class="container">
 			<section class="select-name">
 				<h2>Enter Details Required</h2>
-				<form action="" method="POST">
-        @csrf
-					<div class="data-input">
-						<label for="receiver_name">Receiver Details:</label>
-						<!-- Populate this select box with names retrieved from the database -->
-						<select id="receiver_name" name="receiver_name" required>
-							<option value="">Select a receiver details...</option>
-						</select>
-					</div>
-					<div class="data-input">
-						<label for="item_barcode">Barcode:</label>
-						<input type="text" id="item_barcode" name="item_barcode" required>
-					</div>
-					<button type="submit" name="submit" class="submit-button">Submit</button>
-				</form>
+				<form action="{{ route('checkouts') }}" method="POST">
+    @csrf
+    <div class="data-input">
+        <label for="receiver_name">Receiver Details:</label>
+        <!-- Populate this select box with names retrieved from the database -->
+        <select id="receiver_name" name="receiver_name" required>
+            <option value="">Select a receiver details...</option>
+            @foreach($receivers as $receiver)
+                <option value="{{ $receiver->receiver_ic }}">
+                    {{ $receiver->receiver_ic }} - {{ $receiver->receiver_name }}
+                </option>
+            @endforeach
+        </select>
+    </div>
+    <div class="data-input">
+        <label for="item_barcode">Barcode:</label>
+        <input type="text" id="item_barcode" name="item_barcode" required>
+    </div>
+    <button type="submit" name="submit" class="submit-button">Submit</button>
+</form>
 			</section>
 		</main>
 		<div class="nutri">
