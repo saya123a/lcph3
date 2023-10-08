@@ -88,11 +88,11 @@
 			<section class="receiver-list">
 				<h2>List of Receivers</h2>
 				<ul class="receiver-list">
-                    @forelse($receivers as $receiver)
+                    <!--@forelse($receivers as $receiver)
                         <li class="receiver-box">{{ $receiver->receiver_ic }} - {{ $receiver->receiver_name }}</li>
                     @empty
                         <li>No receivers found.</li>
-                    @endforelse
+                    @endforelse-->
 				</ul>
 			</section>
 		</main>
