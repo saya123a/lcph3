@@ -45,9 +45,9 @@
 					<li><a href="{{ route('checkout') }}">Checkout</a></li>
                     <li>
                         <div class="dropdown">
-                            <a button class="dropbtn id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            <a  class="dropbtn id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
-                            </button></a>
+                            </a>
 							<div class="dropdown-content">
 							    <a href="{{ route('logout') }}"
                                     onclick="event.preventDefault();
