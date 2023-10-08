@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Add Current Stock</title>
+		<title>Checkout</title>
 		<!--Meta Tag-->
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -42,7 +42,7 @@
 							</div>	
 						</div>
 					</li>
-					<li><a href="checkoutmain.php">Checkout</a></li>
+					<li><a href="{{ route('checkout') }}">Checkout</a></li>
 					<li>
                         <div class="dropdown">
                             <a button class="dropbtn id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -71,36 +71,35 @@
 			<section class="select-name">
 				<h2>Enter Details Required</h2>
 				<form action="{{ route('checkouts') }}" method="POST">
-    @csrf
-    <div class="data-input">
-        <label for="receiver_name">Receiver Details:</label>
-        <!-- Populate this select box with names retrieved from the database -->
-        <select id="receiver_name" name="receiver_name" required>
-            <option value="">Select a receiver details...</option>
-            @foreach($receivers as $receiver)
-                <option value="{{ $receiver->receiver_ic }}">
-                    {{ $receiver->receiver_ic }} - {{ $receiver->receiver_name }}
-                </option>
-            @endforeach
-        </select>
-    </div>
-    <div class="data-input">
-        <label for="item_barcode">Barcode:</label>
-        <input type="text" id="item_barcode" name="item_barcode" required>
-    </div>
-    <button type="submit" name="submit" class="submit-button">Submit</button>
-</form>
+                    @csrf
+                    <div class="data-input">
+                        <label for="receiver_name">Receiver Details:</label>
+                        <!-- Populate this select box with names retrieved from the database -->
+                        <select id="receiver_name" name="receiver_name" required>
+                            <option value="">Select a receiver details...</option>
+                            @foreach($receivers as $receiver)
+                                <option value="{{ $receiver->receiver_ic }}">
+                                    {{ $receiver->receiver_ic }} - {{ $receiver->receiver_name }}
+                                </option>
+                            @endforeach
+                        </select>
+                    </div>
+                    <div class="data-input">
+                        <label for="item_barcode">Barcode:</label>
+                        <input type="text" id="item_barcode" name="item_barcode" required>
+                    </div>
+                    <button type="submit" name="submit" class="submit-button">Submit</button>
+                </form>
                 @if(session('success'))
-    <div class="alert alert-success">
-        {{ session('success') }}
-    </div>
-@endif
-
-@if(session('error'))
-    <div class="alert alert-danger">
-        {{ session('error') }}
-    </div>
-@endif
+                    <div class="alert alert-success">
+                        {{ session('success') }}
+                    </div>
+                @endif
+                @if(session('error'))
+                    <div class="alert alert-danger">
+                        {{ session('error') }}
+                    </div>
+                @endif
 			</section>
 		</main>
 		<div class="nutri">
