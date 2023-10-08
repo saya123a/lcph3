@@ -28,12 +28,12 @@ class AddnewreceiverController extends Controller
             return redirect(route('addnewreceiver'))->with('error', 'Receiver already exist.');
         } else {
             // Receiver does not exist, insert the data
-            $data['name'] = ucwords($data['item_name']);
+            $data['name'] = ucwords($data['name']);
 
             Addnewreceiver::create($data);
             
             // Redirect to the same page with a success message
-            return redirect(route('addnewreceiver'))->with('success', 'Receiver with IC: ' . $data['item_barcode'] . ' inserted successfully!');
+            return redirect(route('addnewreceiver'))->with('success', 'Receiver with IC: ' . $data['ic'] . ' inserted successfully!');
         }
     }
 }
