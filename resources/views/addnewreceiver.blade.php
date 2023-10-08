@@ -128,13 +128,13 @@
 			// Check if the 'notfound' query parameter is present
 			const notFoundParam = getQueryParam('notfound');
 			if (notFoundParam === 'true') {
-				// Show a notification that the barcode was not found
-				alert("Barcode not found in the database. Please add new data.");
+				// Show a notification that the ic was not found
+				alert("Receiver not found in the database. Please add new data.");
 			}
 		
 			// Automatically focus on the input field when the page loads
 			document.addEventListener("DOMContentLoaded", function() {
-				document.getElementById("item_barcode").focus();
+				document.getElementById("receiver_ic").focus();
 			});
 		</script>
 	</body>
