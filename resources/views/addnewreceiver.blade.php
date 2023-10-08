@@ -71,14 +71,14 @@
 			<section class="data-entry">
 				<h2>Enter Details Required</h2>
 				<form action="{{ route('addnewreceivers') }}" method="POST">
-          @csrf
+                    @csrf
 					<div class="data-input">
 						<label for="receiver_ic">IC:</label>
-						<input type="text" id="ic" name="ic" pattern="[0-9]{12}" title="Receiver IC must be exactly 12 numeric characters." required>
+						<input type="text" id="receiver_ic" name="receiver_ic" pattern="[0-9]{12}" title="Receiver IC must be exactly 12 numeric characters." required>
 					</div>
 					<div class="data-input">
 						<label for="receiver_name">Name:</label>
-						<input type="text" id="name" name="name" required>
+						<input type="text" id="receiver_name" name="receiver_name" required>
 					</div>
 					<button type="submit" name="submit" class="submit-button">Submit</button>
 				</form>
