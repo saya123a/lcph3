@@ -23,10 +23,12 @@ class DeletecurrentreceiverController extends Controller
             // Receiver exists, delete the first matching record
             $existingReceiver->delete();
 
-            return redirect()->back()->with('success', 'Receiver with IC: ' . $receiverIc . ' deleted successfully.');
+            $message = 'Receiver with IC: ' . $receiverIc . ' deleted successfully.';
         } else {
-            // Receiver does not exist, show a notification
-            return redirect()->route('deletecurrentreceiver')->with('error', 'IC: ' . $receiverIc . ' does not exist.');
+            // Receiver does not exist, set an error message
+            $message = 'IC: ' . $receiverIc . ' does not exist.';
         }
+
+        return redirect()->route('deletecurrentreceiver')->with('message', $message);
     }
 }
