@@ -27,7 +27,7 @@ class HomeController extends Controller
 
         return view('home', ['items' => $items, 'stockItems' => $stockItems]);
     }
-
+/**
     public function homes(Request $request)
     {
         $data = $request->validate([
@@ -61,5 +61,5 @@ class HomeController extends Controller
     {
         $item->delete();
         return redirect(route('home'));
-    }
+    }**/
 }
