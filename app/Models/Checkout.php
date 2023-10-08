@@ -18,4 +18,16 @@ class Checkout extends Model
       'receiver_ic',
       'receiver_name'
     ];
+
+    // Define the relationship with the 'items' table
+    public function item()
+    {
+        return $this->belongsTo(Addnewitem::class, 'item_barcode', 'item_name', 'item_brand');
+    }
+
+    // Define the relationship with the 'receiver' table
+    public function receiver()
+    {
+        return $this->belongsTo(Addnewreceiver::class, 'receiver_ic', 'receiver_name');
+    }
 }
