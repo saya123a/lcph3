@@ -7,9 +7,10 @@ use App\Models\Receiver;
 
 class ReceiverController extends Controller
 {
-    public function addnewitem()
+    public function getreceivers()
     {
-        $items = Addnewitem::all();
-        return view('addnewitem', ['items' => $items]);
+        $receivers = Receiver::all(); // Retrieve all receiver details from the database
+
+        return view('home', compact('receivers'));
     }
 }
