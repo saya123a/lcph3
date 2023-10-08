@@ -22,12 +22,12 @@ class Checkout extends Model
     // Define the relationship with the 'items' table
     public function item()
     {
-        return $this->belongsTo(Item::class, 'item_barcode', 'item_name', 'item_brand');
+        return $this->belongsTo(Item::class, 'item_barcode');
     }
 
     // Define the relationship with the 'receiver' table
     public function receiver()
     {
-        return $this->belongsTo(Receiver::class, 'receiver_ic', 'receiver_name');
+        return $this->belongsTo(Receiver::class, 'receiver_ic');
     }
 }
