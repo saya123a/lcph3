@@ -18,7 +18,7 @@ class CheckoutController extends Controller
 
     public function checkouts(Request $request)
     {
-        $receiverIc = $request->input('receiver_ic');
+        $receiverIc = $request->input('receiver_name');
         $itemBarcode = $request->input('item_barcode');
 
         // Retrieve receiver details based on the selected receiver_ic
