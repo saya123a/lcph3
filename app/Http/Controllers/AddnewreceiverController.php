@@ -17,7 +17,7 @@ class AddnewreceiverController extends Controller
     {
         $data = $request->validate([
             'ic' => 'required|numeric|digits:12|unique:receiver', // Adjust the table name if needed
-            'name' => 'required|alpha|max:255', // Adjust maximum length and format as needed
+            'name' => 'required|alpha|max:255' // Adjust maximum length and format as needed
         ]);
 
         // Check if the receiver already exists in the database
