@@ -15,7 +15,6 @@ class DeletecurrentreceiverController extends Controller
     public function deletecurrentreceivers(Request $request)
     {
         $receiverIc = $request->input('receiver_ic');
-        $message = '';
 
         // Find the first matching item
         $existingReceiver = Deletecurrentreceiver::where('receiver_ic', $receiverIc)->first();
@@ -24,10 +23,10 @@ class DeletecurrentreceiverController extends Controller
             // Receiver exists, delete the first matching record
             $existingReceiver->delete();
 
-            $message = 'Receiver with IC: ' . $receiverIc . ' deleted successfully.';
+            return redirect()->back()->with('success', 'Receiver with IC: ' . $receiverIc . ' deleted successfully.');
         } else {
-            // Receiver does not exist, set an error message
-            $message = 'IC: ' . $receiverIc . ' does not exist.';
+            // Barcode does not exist, show a notification
+            return redirect()->route('deletecurrentreceiver')->with('error', 'IC: ' . $receiverIc . ' does not exist.');
         }
 
         return redirect()->route('deletecurrentreceiver')->with('message', $message);
