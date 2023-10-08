@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Home;
+use App\Models\Item;
+use App\Models\Receiver;
 use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
@@ -15,8 +16,8 @@ class HomeController extends Controller
     
     public function home()
     {
-        // Retrieve data from the "home" table using Eloquent
-        $items = Home::all();
+        // Retrieve data from the "Item" table using Eloquent
+        $items = Item::all();
 
         // Query to retrieve item_name, item_brand, and quantity for stock
         $stockItems = DB::table('item')
@@ -25,9 +26,12 @@ class HomeController extends Controller
             ->groupBy('item_name', 'item_brand')
             ->get();
 
-        return view('home', ['items' => $items, 'stockItems' => $stockItems]);
-    }
+        // Retrieve receiver_ic and receiver_name
+        $receivers = Receiver::all();
 
+    return view('home', ['items' => $items, 'stockItems' => $stockItems, 'receivers' => $receivers]);
+    }   
+/**
     public function homes(Request $request)
     {
         $data = $request->validate([
@@ -61,5 +65,5 @@ class HomeController extends Controller
     {
         $item->delete();
         return redirect(route('home'));
-    }
+    }**/
 }
