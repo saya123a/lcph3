@@ -161,6 +161,13 @@
 	text-align: left;
 }
 
+.navbar .dropdown-contents {
+	display: none;
+	position: absolute;
+	background-color: #333;
+	min-width: 150px;
+	z-index: 1;
+}
 .navbar .dropdown-contents a {
 	float: none;
 	color: white;
