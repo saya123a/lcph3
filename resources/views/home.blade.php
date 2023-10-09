@@ -66,9 +66,15 @@
 				</div>
 			</div>
 		</nav>
-		<div class="banner">
-            <h1>La Cottage Prayer Hall Food Bank</h1>
-        </div>
+        <nav class="navbar">
+			<div class="content">
+                <h1>La Cottage Prayer Hall Food Bank</h1>
+				<div class="icon menu-btn">
+					<i class="fas fa-bars"></i>
+				</div>
+			</div>
+		</nav>
+		<div class="banner"></div>
 		<main>
             <h1>La Cottage Prayer Hall Food Bank</h1>
 			<h2>Current Stocks</h2>
