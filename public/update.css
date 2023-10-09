@@ -54,7 +54,7 @@
     /* Add more styles as needed */
 }
 
-.navbar .nav-link.dropdown-toggle:hover {
+.navbar .nav-link dropdown-toggle:hover {
     /* Add your custom styles for hover state */
     background-color: #555; /* Background color on hover */
     color: #fff; /* Text color on hover */
