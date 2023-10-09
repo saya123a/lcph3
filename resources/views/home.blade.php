@@ -49,19 +49,20 @@
 					</li>
 					<li><a href="{{ route('checkout') }}">Checkout</a></li>
                     <div class="dropdown-container">
-						<button class="dropdown-button">Hover Mea</button>
+						<a class="dropdown-button">{{ Auth::user()->name }}</a>
 						<div class="dropdown-content">
-							<a href="page1.html">Page 1</a>
-							<a href="page2.html">Page 2</a>
-							<a href="page3.html" class="has-dropdown">Page 3</a>
-							<div class="nested-dropdown-content">
-								<a href="page3-dropdown-item1.html">Dropdown Item 1</a>
-								<a href="page3-dropdown-item2.html">Dropdown Item 2</a>
-							</div>
+							<a href="{{ route('logout') }}"
+                                onclick="event.preventDefault();
+                                document.getElementById('logout-form').submit();">
+                                {{ __('Logout') }}
+                            </a>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                @csrf
+                            </form>
 						</div>
 					</div>
                         <!--<div class='dropdown'>
-                            <a button  class="nav-link dropdown-toggle" role="button" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            <a button class="nav-link dropdown-toggle" role="button" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 {{ Auth::user()->name }}
                             </button></a>
 							<div class="dropdown-contents">
