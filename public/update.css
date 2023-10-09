@@ -23,6 +23,47 @@
 	background: rgb(0,123,255,0.3);
 }
 
+
+/* Style for individual dropdown items */
+.dropdown-item {
+    color: #333; /* Text color */
+    padding: 10px 20px; /* Item padding */
+    text-decoration: none; /* Remove underlines from links */
+    transition: background-color 0.3s; /* Transition effect */
+}
+
+.dropdown-item:hover {
+    background-color: #555; /* Background color on hover */
+    color: #fff; /* Text color on hover */
+}
+
+/* Style for the entire dropdown menu */
+.dropdown-menu {
+    background-color: #fff; /* Background color of the menu */
+    border: 1px solid #ccc; /* Border around the menu */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Box shadow */
+    min-width: 160px; /* Minimum width of the menu */
+    z-index: 1; /* Ensure the menu is above other elements */
+}
+
+/* Style for nav-link dropdown-toggle */
+.navbar .nav-link.dropdown-toggle {
+    /* Add your custom styles here */
+    color: #333; /* Text color */
+    text-decoration: none; /* Remove underlines */
+    /* Add more styles as needed */
+}
+
+.navbar .nav-link.dropdown-toggle:hover {
+    /* Add your custom styles for hover state */
+    background-color: #555; /* Background color on hover */
+    color: #fff; /* Text color on hover */
+    /* Add more styles as needed */
+}
+
+/* Continue with your existing styles */
+
+
 /* Alert styles */
 .alert {
     padding: 20px 40px; /* Add padding to the alert */
