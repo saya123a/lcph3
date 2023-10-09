@@ -48,8 +48,19 @@
 						</div>
 					</li>
 					<li><a href="{{ route('checkout') }}">Checkout</a></li>
-                    
-                        <div class='dropdown'>
+                    <div class="dropdown-container">
+						<button class="dropdown-button">Hover Mea</button>
+						<div class="dropdown-content">
+							<a href="page1.html">Page 1</a>
+							<a href="page2.html">Page 2</a>
+							<a href="page3.html" class="has-dropdown">Page 3</a>
+							<div class="nested-dropdown-content">
+								<a href="page3-dropdown-item1.html">Dropdown Item 1</a>
+								<a href="page3-dropdown-item2.html">Dropdown Item 2</a>
+							</div>
+						</div>
+					</div>
+                        <!--<div class='dropdown'>
                             <a button  class="nav-link dropdown-toggle" role="button" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 {{ Auth::user()->name }}
                             </button></a>
@@ -63,7 +74,7 @@
                                     @csrf
                                 </form>
 	                        </div>
-                        </div>
+                        </div>-->
                     
 				</ul>
 				<div class="icon menu-btn">
