@@ -2,10 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ItemController;
 use App\Http\Controllers\ReceiverController;
-use App\Http\Controllers\AddnewitemController;
-use App\Http\Controllers\AddcurrentitemController;
-use App\Http\Controllers\DeletecurrentitemController;
 use App\Http\Controllers\CheckoutController;
 
 /*
@@ -33,12 +31,12 @@ Route::middleware(['auth'])->group(function () {
     Route::put('/home/{item}/update', [HomeController::class, 'update'])->name('update');
     Route::delete('/home/{item}/delete', [HomeController::class, 'delete'])->name('delete');**/
     
-    Route::get('/addnewitem', [AddnewitemController::class, 'addnewitem'])->name('addnewitem');
-    Route::post('/addnewitem', [AddnewitemController::class, 'addnewitems'])->name('addnewitems');
-    Route::get('/addcurrentitem', [AddcurrentitemController::class, 'addcurrentitem'])->name('addcurrentitem');
-    Route::post('/addcurrentitem', [AddcurrentitemController::class, 'addcurrentitems'])->name('addcurrentitems');
-    Route::get('/deletecurrentitem', [DeletecurrentitemController::class, 'deletecurrentitem'])->name('deletecurrentitem');
-    Route::post('/deletecurrentitem', [DeletecurrentitemController::class, 'deletecurrentitems'])->name('deletecurrentitems');
+    Route::get('/addnewitem', [ItemController::class, 'addnewitem'])->name('addnewitem');
+    Route::post('/addnewitem', [ItemController::class, 'addnewitems'])->name('addnewitems');
+    Route::get('/addcurrentitem', [ItemController::class, 'addcurrentitem'])->name('addcurrentitem');
+    Route::post('/addcurrentitem', [ItemController::class, 'addcurrentitems'])->name('addcurrentitems');
+    Route::get('/deletecurrentitem', [ItemController::class, 'deletecurrentitem'])->name('deletecurrentitem');
+    Route::post('/deletecurrentitem', [ItemController::class, 'deletecurrentitems'])->name('deletecurrentitems');
     Route::get('/addnewreceiver', [ReceiverController::class, 'addnewreceiver'])->name('addnewreceiver');
     Route::post('/addnewreceiver', [ReceiverController::class, 'addnewreceivers'])->name('addnewreceivers');
     Route::get('/deletecurrentreceiver', [ReceiverController::class, 'deletecurrentreceiver'])->name('deletecurrentreceiver');
