@@ -47,6 +47,7 @@
 /*images*/
 .lcph{
 	width:65px;
+    background-position: center;
 }
 
 .lcph:hover{
