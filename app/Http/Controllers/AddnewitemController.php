@@ -3,13 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Addnewitem;
+use App\Models\Item;
 
 class AddnewitemController extends Controller
 {
     public function addnewitem()
     {
-        $items = Addnewitem::all();
+        $items = Item::all();
         return view('addnewitem', ['items' => $items]);
     }
 
@@ -22,7 +22,7 @@ class AddnewitemController extends Controller
         ]);
 
         // Check if the barcode already exists in the database
-        $existingItem = Addnewitem::where('item_barcode', $data['item_barcode'])->first();
+        $existingItem = Item::where('item_barcode', $data['item_barcode'])->first();
 
         if ($existingItem) {
             // Barcode already exists, redirect to the same page with an error message
@@ -33,7 +33,7 @@ class AddnewitemController extends Controller
             $data['item_brand'] = ucwords($data['item_brand']);
             $data['item_datereg'] = now();
 
-            Addnewitem::create($data);
+            Item::create($data);
             
             // Redirect to the same page with a success message
             return redirect(route('addnewitem'))->with('success', 'New stock with barcode: ' . $data['item_barcode'] . ' inserted successfully!');
@@ -41,12 +41,12 @@ class AddnewitemController extends Controller
     }
     
    /** 
-   public function edit(Addnewitem $item)
+   public function edit(Item $item)
    {
         return view('edit', ['item' => $item]);
    }
 
-   public function update(Addnewitem $item, Request $request)
+   public function update(Item $item, Request $request)
    { 
        $data = $request->validate([
            'item_barcode' => 'required',
@@ -58,7 +58,7 @@ class AddnewitemController extends Controller
        return redirect(route('addnewitem'));
    }
 
-   public function delete(Addnewitem $item)
+   public function delete(Item $item)
    {
        $item->delete();
        return redirect(route('addnewitem'));
