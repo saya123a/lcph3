@@ -23,23 +23,24 @@
 	background: rgb(0,123,255,0.3);
 }
 
-/* Style for the dropdown container */
+		/* Style for the dropdown container */
 .dropdown-container {
     position: relative;
     display: inline-block;
+	margin-left: 20px;
+	margin-right: 20px;
 }
 
 /* Style for the dropdown button */
 .dropdown-button {
     background-color: #3498db;
     color: #fff;
-    border: none;
     padding: 10px 20px;
+    border: none;
     cursor: pointer;
-    border-radius: 4px;
 }
 
-/* Style for the dropdown content (hidden by default) */
+/* Style for the dropdown content */
 .dropdown-content {
     display: none;
     position: absolute;
@@ -49,23 +50,41 @@
     z-index: 1;
 }
 
-/* Style for the links inside the dropdown */
+/* Style for the links in the dropdown */
 .dropdown-content a {
-    color: #333;
-    padding: 10px;
+    padding: 12px 16px;
     text-decoration: none;
     display: block;
-    transition: background-color 0.3s;
+    color: #333;
 }
 
-/* Change color of links on hover */
+/* Style for the links on hover */
 .dropdown-content a:hover {
     background-color: #ddd;
 }
 
-/* Show the dropdown content on hover */
+/* Show the dropdown content when hovering over the dropdown container */
 .dropdown-container:hover .dropdown-content {
     display: block;
+}
+
+/* Style for the nested dropdown content */
+.nested-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    left: 0;
+    top: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Show the nested dropdown content when hovering over the main link or the nested dropdown content itself */
+.has-dropdown:hover + .nested-dropdown-content, .nested-dropdown-content:hover {
+    display: block;
+	top: 60%;
+	left: 100%;
 }
 
 /* Alert styles */
