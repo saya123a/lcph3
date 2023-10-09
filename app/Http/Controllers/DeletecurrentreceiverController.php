@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Deletecurrentreceiver;
+use App\Models\Receiver;
 
 class DeletecurrentreceiverController extends Controller
 {
@@ -17,7 +17,7 @@ class DeletecurrentreceiverController extends Controller
         $receiverIc = $request->input('receiver_ic');
 
         // Find the first matching item
-        $existingReceiver = Deletecurrentreceiver::where('receiver_ic', $receiverIc)->first();
+        $existingReceiver = Receiver::where('receiver_ic', $receiverIc)->first();
 
         if ($existingReceiver) {
             // Receiver exists, delete the first matching record
