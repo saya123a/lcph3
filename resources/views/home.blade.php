@@ -13,7 +13,7 @@
 		<nav class="navbar">
 			<div class="content">
                 <div class="logo">
-					<img class="lcph" src="img/logo_surau.png" >
+					<img class="lcph" a href="{{ route('home') }}" src="img/logo_surau.png"></a>
                     <h3>La Cottage Prayer Hall Food Bank</h3>
 				</div>
 				<ul class="menu-list">
