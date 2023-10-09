@@ -152,15 +152,6 @@
 	z-index: 1;
 }
 
-/* Styles for the first-level dropdown */
-.navbar .dropdown-contents a{
-	display: none;
-	position: absolute;
-	background-color: #333;
-	min-width: 150px;
-	z-index: 1;
-}
-
 .navbar .dropdown-content a {
 	float: none;
 	color: white;
