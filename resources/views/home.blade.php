@@ -48,8 +48,8 @@
 						</div>
 					</li>
 					<li><a href="{{ route('checkout') }}">Checkout</a></li>
-                    <li>
-                        <!--<div class='dropdown'>
+                    
+                        <div class='dropdown'>
                             <a button  class="nav-link dropdown-toggle" role="button" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 {{ Auth::user()->name }}
                             </button></a>
@@ -63,33 +63,8 @@
                                     @csrf
                                 </form>
 	                        </div>
-                        </div>-->
-                        <!--<div class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
-                                </a>
-
-                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </div>-->
-                        <div class="dropdown-container">
-        <button class="dropdown-button">Hover Me</button>
-        <div class="dropdown-content">
-            <a href="page1.html">Page 1</a>
-            <a href="page2.html">Page 2</a>
-            <a href="page3.html">Page 3</a>
-        </div>
-    </div>
-                    </li>
+                        </div>
+                    
 				</ul>
 				<div class="icon menu-btn">
 					<i class="fas fa-bars"></i>
