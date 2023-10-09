@@ -64,7 +64,7 @@
                                 </form>
 	                        </div>
                         </div>-->
-                        <div class="nav-item dropdown">
+                        <!--<div class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
                                 </a>
@@ -80,8 +80,15 @@
                                         @csrf
                                     </form>
                                 </div>
-                            </div>
-
+                            </div>-->
+                        <div class="dropdown-container">
+        <button class="dropdown-button">Hover Me</button>
+        <div class="dropdown-content">
+            <a href="page1.html">Page 1</a>
+            <a href="page2.html">Page 2</a>
+            <a href="page3.html">Page 3</a>
+        </div>
+    </div>
                     </li>
 				</ul>
 				<div class="icon menu-btn">
