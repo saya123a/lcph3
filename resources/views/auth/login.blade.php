@@ -67,9 +67,9 @@
                         </div>
                         <!--<div class="signup-link">
 							<br>Not a member?
-                            @if (Route::has('register'))
+                            /*@if (Route::has('register'))
                                     <a class="nav-link" href="{{ route('register') }}">{{ __('Signup now') }}</a>
-                            @endif
+                            @endif*/
 						</div>-->
                     </form>
                 </div>
