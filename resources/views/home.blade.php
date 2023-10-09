@@ -14,8 +14,8 @@
 			<div class="content">
                 <div class="logo">
                     <a href="{{ route('home') }}">
-                        <div class="lcph-container">
-                            <img src="img/logo_surau.png">
+                        <div>
+                            <img class="lcph" src="img/logo_surau.png">
                             <h3>La Cottage Prayer Hall Food Bank</h3>
                         </div>
                     </a>
@@ -103,7 +103,7 @@
 		</main>
 		<div class="nutri">
 			<div class="content">
-				<img class="lcph" src="img/logo_surau.png">
+				<img class="lcph2" src="img/logo_surau.png">
 				<p>&copy; 2023 La Cottage Prayer Hall</p>
 			</div>
 		</div>
