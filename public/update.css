@@ -33,8 +33,11 @@
 
 /* Style for the dropdown button */
 .dropdown-button {
-    border: none;
     cursor: pointer;
+}
+
+.dropdown-button a:hover {
+    color: #FB286B
 }
 
 /* Style for the dropdown content */
