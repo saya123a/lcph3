@@ -48,9 +48,12 @@
 .lcph {
     width: 65px;
 }
+.lcph2 {
+    width: 65px;
+}
 
 /* Apply hover effect to the container */
-.lcph:hover {
+.lcph2:hover {
     transform: scale(1.07);
     background: #FB286B;
     color: #FB286B;
