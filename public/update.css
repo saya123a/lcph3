@@ -84,7 +84,7 @@
 	justify-content: space-between;
 }
 
-.navbar .logo a{
+.navbar .logo{
 	color: #fff;
 	font-size: 30px;
 	font-weight: 600;
