@@ -14,7 +14,7 @@
 			<div class="content">
                 <div class="logo">
 					<img class="lcph" src="img/logo_surau.png" ></a>
-                    <h1>La Cottage Prayer Hall Food Bank</h1>
+                    <h2>La Cottage Prayer Hall Food Bank</h2>
 				</div>
 				<ul class="menu-list">
 					<div class="icon cancel-btn">
@@ -69,7 +69,6 @@
 		</nav>
 		<div class="banner"></div>
 		<main>
-            <h1>La Cottage Prayer Hall Food Bank</h1>
 			<h2>Current Stocks</h2>
 			<div class="bar-grid">
                 @if(count($stockItems) > 0)
