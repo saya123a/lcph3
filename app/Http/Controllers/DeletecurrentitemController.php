@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Deletecurrentitem;
+use App\Models\Item;
 
 class DeletecurrentitemController extends Controller
 {
@@ -17,7 +17,7 @@ class DeletecurrentitemController extends Controller
         $itemBarcode = $request->input('item_barcode');
 
         // Find the first matching item
-        $existingItem = Deletecurrentitem::where('item_barcode', $itemBarcode)->first();
+        $existingItem = Item::where('item_barcode', $itemBarcode)->first();
 
         if ($existingItem) {
             // Barcode exists, delete the first matching record
