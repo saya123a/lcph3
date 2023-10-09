@@ -13,8 +13,12 @@
         <nav class="navbar">
 			<div class="content">
 				<div class="logo">
-					<img class="lcph" src="img/logo_surau.png" ></a> 	
-				</div>
+                    <a href="{{ route('home') }}">
+                        <div>
+                            <img class="lcph" src="img/logo_surau.png">
+                        </div>
+                    </a>
+                </div>
 				<ul class="menu-list">
 					<div class="icon cancel-btn">
 						<i class="fas fa-times"></i>
