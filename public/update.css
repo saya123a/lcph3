@@ -45,30 +45,31 @@
 }
 
 /*images*/
-.lcph{
-	width:65px;
+.lcph {
+    width: 65px;
 }
 
-.lcph:hover{
-	transform: scale(1.07);
-	background: #FB286B;
+/* Apply hover effect to the container */
+.lcph-container:hover {
+    transform: scale(1.07);
+    background: #FB286B;
     color: #FB286B;
     box-shadow: 0 0 5px #FB286B,
                 0 0 25px #FB286B,
                 0 0 50px #FB286B,
-                0 0 200px #FB286B;  
+                0 0 200px #FB286B;
 }
 
-.navbar .logo a{
-	color: black;
-	/**font-size: 20px;
-	font-weight: 400;**/
-	text-decoration: none;
+.navbar .logo a {
+    color: black;
+    /**font-size: 20px;
+    font-weight: 400;**/
+    text-decoration: none;
     cursor: pointer;
 }
 
-.navbar .logo a:hover{
-	color: #FB286B;
+.navbar .logo a:hover {
+    color: #FB286B;
 }
 
 .info{
