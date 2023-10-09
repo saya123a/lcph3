@@ -3,13 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Addnewreceiver;
+use App\Models\Receiver;
 
 class AddnewreceiverController extends Controller
 {
     public function addnewreceiver()
     {
-        $receivers = Addnewreceiver::all();
+        $receivers = Receiver::all();
         return view('addnewreceiver', ['receivers' => $receivers]);
     }
 
@@ -21,7 +21,7 @@ class AddnewreceiverController extends Controller
         ]);
 
         // Check if the receiver already exists in the database
-        $existingReceiver = Addnewreceiver::where('receiver_ic', $data['receiver_ic'])->first();
+        $existingReceiver = Receiver::where('receiver_ic', $data['receiver_ic'])->first();
 
         if ($existingReceiver) {
             // Receiver already exists, redirect to the same page with an error message
@@ -30,7 +30,7 @@ class AddnewreceiverController extends Controller
             // Receiver does not exist, insert the data
             $data['receiver_name'] = strtoupper($data['receiver_name']);
 
-            Addnewreceiver::create($data);
+            Receiver::create($data);
             
             // Redirect to the same page with a success message
             return redirect(route('addnewreceiver'))->with('success', 'Receiver with IC: ' . $data['receiver_ic'] . ' inserted successfully!');
