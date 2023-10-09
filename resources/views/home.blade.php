@@ -66,9 +66,11 @@
 				</div>
 			</div>
 		</nav>
-		<div class="banner"></div>
+		<div class="banner">
+            <h1>La Cottage Prayer Hall Food Bank</h1>
+        </div>
 		<main>
-            <h2>La Cottage Prayer Hall Food Bank</h2>
+            <h1>La Cottage Prayer Hall Food Bank</h1>
 			<h2>Current Stocks</h2>
 			<div class="bar-grid">
                 @if(count($stockItems) > 0)
