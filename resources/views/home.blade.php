@@ -12,8 +12,10 @@
 	<body>
 		<nav class="navbar">
 			<div class="content">
-				            <h1>La Cottage Prayer Hall Food Bank</h1>
-
+                <div class="logo">
+					<img class="lcph" src="img/logo_surau.png" ></a>
+                    <h1>La Cottage Prayer Hall Food Bank</h1>
+				</div>
 				<ul class="menu-list">
 					<div class="icon cancel-btn">
 						<i class="fas fa-times"></i>
