@@ -181,6 +181,10 @@
 	background-color: #ddd;
 }
 
+.navbar .dropdown-contents a:hover {
+	background-color: #ddd;
+}
+
 .navbar .dropdown:hover .dropdown-content {
 	display: block;
 }
