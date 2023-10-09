@@ -24,7 +24,7 @@
 }
 
 /* Style for the dropdown container */
-.dropdown-container {
+.navbar .dropdown-container {
     position: relative;
     display: inline-block;
 	margin-left: 20px;
@@ -32,16 +32,20 @@
 }
 
 /* Style for the dropdown button */
-.dropdown-button {
+.navbar .dropdown-button {
+    background-color: transparent;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
     cursor: pointer;
 }
 
-.dropdown-button a:hover {
+.navbar .dropdown-button a:hover {
     color: #FB286B
 }
 
 /* Style for the dropdown content */
-.dropdown-content {
+.navbar .dropdown-content {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
@@ -51,7 +55,7 @@
 }
 
 /* Style for the links in the dropdown */
-.dropdown-content a {
+.navbar .dropdown-content a {
     padding: 12px 16px;
     text-decoration: none;
     display: block;
@@ -59,12 +63,12 @@
 }
 
 /* Style for the links on hover */
-.dropdown-content a:hover {
+.navbar .dropdown-content a:hover {
     background-color: #FB286B;
 }
 
 /* Show the dropdown content when hovering over the dropdown container */
-.dropdown-container:hover .dropdown-content {
+.navbar .dropdown-container:hover .dropdown-content {
     display: block;
 }
 
