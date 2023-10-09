@@ -14,9 +14,7 @@
 			<div class="content">
 				<div class="logo">
                     <a href="{{ route('home') }}">
-                        <div>
-                            <img class="lcph" src="img/logo_surau.png">
-                        </div>
+                        <img class="lcph2" src="img/logo_surau.png">
                     </a>
                 </div>
 				<ul class="menu-list">
