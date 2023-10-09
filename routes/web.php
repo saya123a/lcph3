@@ -6,8 +6,6 @@ use App\Http\Controllers\ReceiverController;
 use App\Http\Controllers\AddnewitemController;
 use App\Http\Controllers\AddcurrentitemController;
 use App\Http\Controllers\DeletecurrentitemController;
-use App\Http\Controllers\AddnewreceiverController;
-use App\Http\Controllers\DeletecurrentreceiverController;
 use App\Http\Controllers\CheckoutController;
 
 /*
@@ -41,10 +39,10 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/addcurrentitem', [AddcurrentitemController::class, 'addcurrentitems'])->name('addcurrentitems');
     Route::get('/deletecurrentitem', [DeletecurrentitemController::class, 'deletecurrentitem'])->name('deletecurrentitem');
     Route::post('/deletecurrentitem', [DeletecurrentitemController::class, 'deletecurrentitems'])->name('deletecurrentitems');
-    Route::get('/addnewreceiver', [AddnewreceiverController::class, 'addnewreceiver'])->name('addnewreceiver');
-    Route::post('/addnewreceiver', [AddnewreceiverController::class, 'addnewreceivers'])->name('addnewreceivers');
-    Route::get('/deletecurrentreceiver', [DeletecurrentreceiverController::class, 'deletecurrentreceiver'])->name('deletecurrentreceiver');
-    Route::post('/deletecurrentreceiver', [DeletecurrentreceiverController::class, 'deletecurrentreceivers'])->name('deletecurrentreceivers');
+    Route::get('/addnewreceiver', [ReceiverController::class, 'addnewreceiver'])->name('addnewreceiver');
+    Route::post('/addnewreceiver', [ReceiverController::class, 'addnewreceivers'])->name('addnewreceivers');
+    Route::get('/deletecurrentreceiver', [ReceiverController::class, 'deletecurrentreceiver'])->name('deletecurrentreceiver');
+    Route::post('/deletecurrentreceiver', [ReceiverController::class, 'deletecurrentreceivers'])->name('deletecurrentreceivers');
     Route::get('/checkout', [CheckoutController::class, 'checkout'])->name('checkout');
     Route::post('/checkout', [CheckoutController::class, 'checkouts'])->name('checkouts');
 
