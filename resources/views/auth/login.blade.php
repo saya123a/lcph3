@@ -55,11 +55,11 @@
                             @enderror
                         </div>
                         <!--<div class="signup-link">
-                                @if (Route::has('password.request'))
+                                /*@if (Route::has('password.request'))
                                     <a class="btn btn-link" href="{{ route('password.request') }}">
                                         {{ __('Forgot Your Password?') }}
                                     </a>
-                                @endif
+                                @endif*/
 						</div>-->
                         <div class="field btn">
 						    <div class="btn-layer"></div>
