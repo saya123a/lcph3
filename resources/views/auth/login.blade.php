@@ -65,12 +65,12 @@
 						    <div class="btn-layer"></div>
 							<input type="submit" name="login" type="button" value="Login">
                         </div>
-                        <div class="signup-link">
+                        /*<div class="signup-link">
 							<br>Not a member?
                             @if (Route::has('register'))
                                     <a class="nav-link" href="{{ route('register') }}">{{ __('Signup now') }}</a>
                             @endif
-						</div>
+						</div>*/
                     </form>
                 </div>
             </div>
