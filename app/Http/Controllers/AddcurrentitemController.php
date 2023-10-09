@@ -17,7 +17,7 @@ class AddcurrentitemController extends Controller
         $itemBarcode = $request->input('item_barcode');
 
         // Check if the barcode already exists in the database
-        $existingItem = Addcurrentitem::where('item_barcode', $itemBarcode)->first();
+        $existingItem = Item::where('item_barcode', $itemBarcode)->first();
 
         if ($existingItem) {
             // Barcode exists, retrieve existing details
@@ -25,7 +25,7 @@ class AddcurrentitemController extends Controller
             $itemBrand = $existingItem->item_brand;
 
             // Add new data with the existing barcode
-            Addcurrentitem::create([
+            Item::create([
                 'item_barcode' => $itemBarcode,
                 'item_name' => $itemName,
                 'item_brand' => $itemBrand,
