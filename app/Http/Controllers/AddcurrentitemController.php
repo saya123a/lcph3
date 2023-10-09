@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Addcurrentitem;
+use App\Models\Item;
 
 class AddcurrentitemController extends Controller
 {
