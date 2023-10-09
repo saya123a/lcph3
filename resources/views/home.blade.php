@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>LCPH Homepage</title>
+		<title>Home</title>
 		<!--Meta Tag-->
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -68,6 +68,7 @@
 		</nav>
 		<div class="banner"></div>
 		<main>
+            <h2>La Cottage Prayer Hall Food Bank</h2>
 			<h2>Current Stocks</h2>
 			<div class="bar-grid">
                 @if(count($stockItems) > 0)
