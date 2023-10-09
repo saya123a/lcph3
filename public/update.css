@@ -181,7 +181,11 @@
 	background-color: #ddd;
 }
 
-.navbar .dropdown:hover .dropdown-content .dropdown-contents{
+.navbar .dropdown:hover .dropdown-content {
+	display: block;
+}
+
+.navbar .dropdown:hover .dropdown-contents {
 	display: block;
 }
 
