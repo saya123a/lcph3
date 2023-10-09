@@ -13,11 +13,13 @@
 		<nav class="navbar">
 			<div class="content">
                 <div class="logo">
-					<a href="{{ route('home') }}">
-                        <img class="lcph" src="img/logo_surau.png">
-                        <h3>La Cottage Prayer Hall Food Bank</h3>
+                    <a href="{{ route('home') }}">
+                        <div class="lcph-container">
+                            <img class="lcph" src="img/logo_surau.png">
+                            <h3>La Cottage Prayer Hall Food Bank</h3>
+                        </div>
                     </a>
-				</div>
+                </div>
 				<ul class="menu-list">
 					<div class="icon cancel-btn">
 						<i class="fas fa-times"></i>
