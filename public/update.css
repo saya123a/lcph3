@@ -50,7 +50,7 @@
 }
 
 /* Apply hover effect to the container */
-.lcph-container:hover {
+.lcph:hover {
     transform: scale(1.07);
     background: #FB286B;
     color: #FB286B;
