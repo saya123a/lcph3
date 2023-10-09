@@ -14,7 +14,7 @@
 			<div class="content">
                 <div class="logo">
 					<img class="lcph" src="img/logo_surau.png" >
-                    <h4>La Cottage Prayer Hall Food Bank</h4>
+                    <h3>La Cottage Prayer Hall Food Bank</h3>
 				</div>
 				<ul class="menu-list">
 					<div class="icon cancel-btn">
