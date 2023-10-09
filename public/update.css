@@ -153,7 +153,7 @@
 }
 
 /* Styles for the first-level dropdown */
-.navbar .dropdown-contents {
+.navbar .dropdown-contents a{
 	display: none;
 	position: absolute;
 	background-color: #333;
