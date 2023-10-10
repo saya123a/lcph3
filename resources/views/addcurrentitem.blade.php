@@ -13,9 +13,7 @@
         <div class="navbar">
 			<div class="content2">
 				<div class="logo">
-					<a href="{{ route('home') }}">
-                        <img class="lcph" src="img/logo_surau.png">
-                    </a>
+                    <img class="lcph" src="img/logo_surau.png">
 				</div>
 				<ul class="menu-list">
 					<div class="icon cancel-btn">
