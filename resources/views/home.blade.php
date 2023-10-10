@@ -24,7 +24,7 @@
 					<div class="icon cancel-btn">
 						<i class="fas fa-times"></i>
 					</div>
-					<li><a href="home_page.php">Laman Utama</a></li>
+					<li><a href="{{ route('home') }}">Home</a></li>
 					<li>
 						<div class="dropdown-container">
 							<a class="dropdown-button">Update</a>
