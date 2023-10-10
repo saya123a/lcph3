@@ -10,8 +10,8 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 	</head>
 	<body>
-		<nav class="navbar">
-			<div class="content">
+		<div class="navbar">
+			<div class="content2">
                 <div class="logo">
                     <a href="{{ route('home') }}">
                         <div>
@@ -26,41 +26,39 @@
 					</div>
 					<li><a href="{{ route('home') }}">Home</a></li>
 					<li>
-						<div class="dropdown">
-							<a button class="dropbtn">Update</button></a>
+						<div class="dropdown-container">
+							<button class="dropdown-button">Update</button>
 							<div class="dropdown-content">
-								<div class="sub-dropdown">
-									<a class="sub-dropbtn">Stocks</a>
-									<div class="sub-dropdown-content">
-										<a href="{{ route('addcurrentitem') }}">Add Current Stocks</a>
-										<a href="{{ route('addnewitem') }}">Add New Stocks</a>
-										<a href="{{ route('deletecurrentitem') }}">Delete Current Stocks</a>
-									</div>
-								</div>
-								<div class="sub-dropdown">
-									<a class="sub-dropbtn">Receiver</a>
-									<div class="sub-dropdown-content">
-										<a href="{{ route('addnewreceiver') }}">Add New Receiver</a>
-										<a href="{{ route('deletecurrentreceiver') }}">Delete Current Receiver</a>
-									</div>
+								<a class="has-dropdown">Stocks</a>
+								<div class="nested-dropdown-content">
+									<a href="{{ route('addcurrentitem') }}">Add Current Stocks</a>
+									<a href="{{ route('addnewitem') }}">Add New Stocks</a>
+									<a href="{{ route('deletecurrentitem') }}">Delete Current Stocks</a>
+								</div>								
+								<a class="has-dropdown">Receiver</a>
+								<div class="nested-dropdown-content">
+									<a href="{{ route('addnewreceiver') }}">Add New Receiver</a>
+									<a href="{{ route('deletecurrentreceiver') }}">Delete Current Receiver</a>
 								</div>
 							</div>	
 						</div>
 					</li>
 					<li><a href="{{ route('checkout') }}">Checkout</a></li>
-                    <div class="dropdown-container">
-						<a class="dropdown-button">{{ Auth::user()->name }}</a>
-						<div class="dropdown-content">
-							<a href="{{ route('logout') }}"
-                                onclick="event.preventDefault();
-                                document.getElementById('logout-form').submit();">
-                                {{ __('Logout') }}
-                            </a>
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                @csrf
-                            </form>
+					<li>
+						<div class="dropdown-container">
+							<button class="dropdown-button">{{ Auth::user()->name }}</button>
+							<div class="dropdown-content">
+								<a href="{{ route('logout') }}"
+									onclick="event.preventDefault();
+									document.getElementById('logout-form').submit();">
+									{{ __('Logout') }}
+								</a>
+								<form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+									@csrf
+								</form>
+							</div>
 						</div>
-					</div>
+					</li>
                         <!--<div class='dropdown'>
                             <a button class="nav-link dropdown-toggle" role="button" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 {{ Auth::user()->name }}
@@ -82,7 +80,7 @@
 					<i class="fas fa-bars"></i>
 				</div>
 			</div>
-		</nav>
+		</div>
 		<div class="banner"></div>
 		<main>
 			<h2>Current Stocks</h2>
