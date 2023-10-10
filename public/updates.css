@@ -159,6 +159,10 @@
     z-index: 1;
 }
 
+.has-dropdown{
+	cursor: pointer;
+}
+
 /* Show the nested dropdown content when hovering over the main link or the nested dropdown content itself */
 .has-dropdown:hover + .nested-dropdown-content, .nested-dropdown-content:hover {
     display: block;
