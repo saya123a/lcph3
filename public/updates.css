@@ -103,16 +103,17 @@
 
 /* Style for the dropdown container */
 .dropdown-container {
-    background-color: transparent;
     position: relative;
     display: inline-block;
 	margin-left: 20px;
 	margin-right: 20px;
 }
+.dropdown-container a{
+    background-color: transparent;
+}
 
 /* Style for the dropdown button */
 .dropdown-button {
-    background-color: transparent;
     padding: 10px 20px;
     border: none;
     cursor: pointer;
