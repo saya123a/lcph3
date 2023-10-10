@@ -1,4 +1,4 @@
-	@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 *{
 	margin: 0;
 	padding: 0;
@@ -6,7 +6,23 @@
 	font-family: 'Poppins', sans-serif;
 }
 
-		
+/* custom scroll bar */
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::selection{
+	background: rgb(0,123,255,0.3);
+}
+
 .navbar{
 	position: fixed;
 	width: 100%;
@@ -16,10 +32,14 @@
 }
 
 .logo a{
-	color: #fff;
-	font-size: 30px;
+	color: black;
+	font-size: 20px;
 	font-weight: 600;
 	text-decoration: none;
+}
+
+.logo a:hover {
+    color: #FB286B;
 }
 
 .icon{
@@ -73,7 +93,7 @@
 	padding-right: 10%;
 }
 	
-		.banner{
+.banner{
 	background: url("img/surau.jpg") no-repeat;
 	height: 80vh;
 	background-size: cover;
@@ -91,8 +111,7 @@
 
 /* Style for the dropdown button */
 .dropdown-button {
-    background-color: yellow;
-    color: black;
+    background-color: transparent;
     padding: 10px 20px;
     border: none;
     cursor: pointer;
@@ -102,7 +121,7 @@
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
+    background-color: white;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -113,7 +132,6 @@
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-    color: #333;
 }
 
 /* Style for the links on hover */
@@ -130,7 +148,7 @@
 .nested-dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
+    background-color: white;
     min-width: 160px;
     left: 0;
     top: 100%;
@@ -148,6 +166,10 @@
 /*images*/
 .lcph{
 	width:65px;
+}
+
+.lcph2 {
+    width: 65px;
 }
 
 .lcph:hover{
@@ -176,4 +198,302 @@
 	margin: auto;
 	padding: 0 30px;
 		
+}
+
+/* Alert styles */
+.alert {
+    padding: 20px 40px; /* Add padding to the alert */
+    margin-bottom: 20px; /* Add spacing between alerts */
+    border-radius: 4px; /* Rounded corners for the alert */
+    text-align: center;
+    position: absolute;
+    left: 25%;
+    width: 50%;
+}
+
+.alert-success {
+    background-color: #4CAF50; /* Background color for success message */
+    color: #fff; /* Text color for success message */
+}
+
+.alert-danger {
+    background-color: red; /* Background color for error message */
+    color: #fff; /* Text color for error message */
+}
+
+.banner{
+	background: url("img/surau.jpg") no-repeat;
+	height: 80vh;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;   
+}
+
+/* Main Content Styles */
+main {
+    padding: 20px;
+}
+
+main h2 {
+	text-align: center;
+	padding: 40px;
+}
+
+/* Updated Bar Chart Styles */
+.bar-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.bar-container {
+    width: calc(25% - 20px); /* Adjust the width as needed (e.g., for 3 or 4 items per row) */
+    margin: 10px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative; /* Added for positioning */
+    transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s; /* Add smooth transitions */
+}
+
+.bar-container:hover {
+    transform: scale(1.05); /* Scale up on hover */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); /* Add a subtle shadow on hover */
+    background-color: #FB286B; /* Change background color on hover */
+    color: #fff; /* Change text color on hover */
+}
+
+.bar {
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Number Styles */
+.item-number {
+    background-color: #FB286B;
+    color: #fff;
+    padding: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    font-weight: bold;
+}
+
+/* Item Name Styles */
+.item-name {
+    font-weight: bold;
+    padding: 10px;
+    font-size: 16px; /* Adjust the font size as needed */
+}
+
+/* Item Brand Styles */
+.item-brand {
+    font-style: italic;
+    padding: 10px;
+}
+
+/* Data Entry Styles */
+.data-input {
+	margin-bottom: 10px;
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.submit-button {
+    background-color: #FB286B;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+	margin-bottom: 30px;
+    transition: background-color 0.2s;
+}
+
+.submit-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.submit-button:hover {
+    background-color: #c8003f;
+}
+
+/* Receiver List Styles */
+.receiver-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.receiver-box {
+	background-color: #fff;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+	padding: 10px;
+	margin: 20px;
+	text-align: center;
+	transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s; /* Add smooth transitions */
+}
+
+.receiver-box:hover {
+	transform: scale(1.05); /* Scale up on hover */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); /* Add a subtle shadow on hover */
+    background-color: #FB286B; /* Change background color on hover */
+    color: #fff; /* Change text color on hover */
+}
+
+@media (max-width: 1230px) {
+	.content{
+		padding: 0 60px;
+	}
+}
+
+@media (max-width: 1100px) {
+	.content{
+		padding: 0 40px;
+	}
+}
+
+@media (max-width: 900px) {
+	.content{
+		padding: 0 30px;
+	}
+}	
+
+@media (max-width: 868px) {
+	body.disabled{
+		overflow: hidden;
+	}
+	
+	.icon{
+		display: block;
+		color: #FB286B;
+		font-size: 10px;
+	}
+  
+	.icon.hide{
+		display: none;
+	}
+	
+	/*images*/
+	.lcph{
+		width:20px;
+	}
+	
+	main h2 {
+		padding: 10px;
+		font-size: 10px;
+	}
+
+	.navbar .menu-list{
+		position: fixed;
+		height: 100vh;
+		width: 100%;
+		max-width: 400px;
+		left: -100%;
+		top: 0px;
+		display: block;
+		padding: 30px 0;
+		text-align: left;
+		background: #222;
+		transition: all 0.3s ease;
+	}
+
+	.navbar.show .menu-list{
+		left: 0%;
+	}
+
+	.navbar .menu-list li{
+		margin-top: 0px;
+		margin-left: 10%;
+	}
+
+	.navbar .menu-list li a{
+		margin-left: -100%;
+		transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+		color: white;
+		font-size: 10px;
+	}
+	
+	.navbar.show .menu-list li a{
+		margin-left: 0px;
+	}
+
+	.menu-list li a:hover{
+		color: #FB286B;
+	}
+	
+	/* Style for home, update and logout */
+	.navbar .dropdown .dropbtn {
+		color: white;
+		font-size: 10px;
+	}
+
+	.navbar .dropdown-content a {
+		padding: 5px 5px;
+	}
+	
+	/* Bar Chart Styles */	
+	.bar-container {
+		width: calc(20% - 10px); /* Adjust the width as needed (e.g., for 3 or 4 items per row) */
+		margin-bottom: 0px;
+	}
+
+	.bar {
+		padding: 10px;
+	}
+
+	/* Number Styles */
+	.item-number {
+		font-size: 5px; /* Adjust the font size as needed */
+	}
+
+	/* Item Name Styles */
+	.item-name {
+		font-size: 5px; /* Adjust the font size as needed */
+	}
+
+	/* Item Brand Styles */
+	.item-brand {
+			font-size: 5px; /* Adjust the font size as needed */
+	}
+	
+	/* Contents */
+	.container {
+		margin-top: 0px;
+	}
+
+	/* Receiver List Styles */
+	.receiver-list {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .receiver-box {
+        padding: 5px;
+        margin: 10px;
+		font-size: 5px;
+	}
+	
+	.nutri{
+	padding: 10px 0;
+	margin-top: 0px;
+}
+
+	.nutri p{
+		font-size: 5px;
+	}
+
+	.content{
+		padding: 0 30px;
+	}
+}
+
+@media (max-width: 380px) {
+	.navbar .logo a{
+		font-size: 27px;
+	}
 }
