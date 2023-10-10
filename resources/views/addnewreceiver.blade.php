@@ -27,7 +27,7 @@
 					<li><a href="{{ route('home') }}">Home</a></li>
 					<li>
 						<div class="dropdown-container">
-							<a class="dropdown-button">Update</a>
+							<a class="has-dropdown">Update</a>
 							<div class="dropdown-content">
 								<a class="has-dropdown">Stocks</a>
 								<div class="nested-dropdown-content">
@@ -46,7 +46,7 @@
 					<li><a href="{{ route('checkout') }}">Checkout</a></li>
 					<li>
 						<div class="dropdown-container">
-							<a class="dropdown-button">{{ Auth::user()->name }}</a>
+							<a class="has-dropdown">{{ Auth::user()->name }}</a>
 							<div class="dropdown-content">
 								<a href="{{ route('logout') }}"
 									onclick="event.preventDefault();
