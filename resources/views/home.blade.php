@@ -12,22 +12,22 @@
 	<body>
 		<div class="navbar">
 			<div class="content2">
-                <div class="logo">
-                    <a href="{{ route('home') }}">
+				<div class="logo">
+					<a href="{{ route('home') }}">
                         <div>
                             <img class="lcph2" src="img/logo_surau.png">
-                            <h3>La Cottage Prayer Hall Food Bank</h3>
+                            <p>La Cottage Prayer Hall Food Bank</p>
                         </div>
                     </a>
-                </div>
+				</div>
 				<ul class="menu-list">
 					<div class="icon cancel-btn">
 						<i class="fas fa-times"></i>
 					</div>
-					<li><a href="{{ route('home') }}">Home</a></li>
+					<li><a href="home_page.php">Laman Utama</a></li>
 					<li>
 						<div class="dropdown-container">
-							<button class="dropdown-button">Update</button>
+							<a class="dropdown-button">Update</a>
 							<div class="dropdown-content">
 								<a class="has-dropdown">Stocks</a>
 								<div class="nested-dropdown-content">
@@ -46,7 +46,7 @@
 					<li><a href="{{ route('checkout') }}">Checkout</a></li>
 					<li>
 						<div class="dropdown-container">
-							<button class="dropdown-button">{{ Auth::user()->name }}</button>
+							<a class="dropdown-button">{{ Auth::user()->name }}</a>
 							<div class="dropdown-content">
 								<a href="{{ route('logout') }}"
 									onclick="event.preventDefault();
@@ -59,22 +59,6 @@
 							</div>
 						</div>
 					</li>
-                        <!--<div class='dropdown'>
-                            <a button class="nav-link dropdown-toggle" role="button" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                {{ Auth::user()->name }}
-                            </button></a>
-							<div class="dropdown-contents">
-							    <a href="{{ route('logout') }}"
-                                    onclick="event.preventDefault();
-                                    document.getElementById('logout-form').submit();">
-                                    {{ __('Logout') }}
-                                </a>
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                    @csrf
-                                </form>
-	                        </div>
-                        </div>-->
-                    
 				</ul>
 				<div class="icon menu-btn">
 					<i class="fas fa-bars"></i>
