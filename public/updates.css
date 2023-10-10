@@ -114,6 +114,7 @@
 
 /* Style for the dropdown button */
 .dropdown-button {
+    background-color: transparent;
     padding: 10px 20px;
     border: none;
     cursor: pointer;
