@@ -136,7 +136,7 @@
 
 /* Style for the links on hover */
 .dropdown-content a:hover {
-    background-color: #ddd;
+    background-color: transparent;
 }
 
 /* Show the dropdown content when hovering over the dropdown container */
