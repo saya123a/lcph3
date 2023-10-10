@@ -27,7 +27,7 @@
 					<li><a href="{{ route('home') }}">Home</a></li>
 					<li>
 						<div class="dropdown-container">
-							<a class="dropdown-button">Update</a>
+							<a class="has-dropdown">Update</a>
 							<div class="dropdown-content">
 								<a class="has-dropdown">Stocks</a>
 								<div class="nested-dropdown-content">
