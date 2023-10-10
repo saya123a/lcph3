@@ -1,0 +1,179 @@
+	@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+		
+.navbar{
+	position: fixed;
+	width: 100%;
+	z-index: 2;
+	padding: 25px 0;
+	transition: all 0.3s ease;
+}
+
+.logo a{
+	color: #fff;
+	font-size: 30px;
+	font-weight: 600;
+	text-decoration: none;
+}
+
+.icon{
+	color: #fff;
+	font-size: 20px;
+	cursor: pointer;
+	display: none;
+}
+
+.cancel-btn{
+	position: absolute;
+	right: 30px;
+	top: 20px;
+}
+
+
+.sticky{
+	background: #ffffff;
+	padding: 10px 0;
+	box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.1);
+}
+
+.menu-list{
+	display: inline-flex;
+}
+
+.menu-list li{
+	list-style: none;
+	font-size: 18px;
+	margin-left: 20px;
+	margin-right:20px;
+}
+
+.menu-list li a{
+	color: #000000;
+	font-size: 18px;
+	font-weight: 500;
+	text-decoration: none;
+	transition: all 0.3s ease;
+}
+
+.menu-list li a:hover{
+	color: #FB286B;
+}
+
+.content2{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-left: 10%;
+	padding-right: 10%;
+}
+	
+		.banner{
+	background: url("img/surau.jpg") no-repeat;
+	height: 80vh;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;   
+}
+
+/* Style for the dropdown container */
+.dropdown-container {
+    position: relative;
+    display: inline-block;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+/* Style for the dropdown button */
+.dropdown-button {
+    background-color: yellow;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Style for the dropdown content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Style for the links in the dropdown */
+.dropdown-content a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    color: #333;
+}
+
+/* Style for the links on hover */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Show the dropdown content when hovering over the dropdown container */
+.dropdown-container:hover .dropdown-content {
+    display: block;
+}
+
+/* Style for the nested dropdown content */
+.nested-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    left: 0;
+    top: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Show the nested dropdown content when hovering over the main link or the nested dropdown content itself */
+.has-dropdown:hover + .nested-dropdown-content, .nested-dropdown-content:hover {
+    display: block;
+	top: 0%;
+	left: 100%;
+}
+
+/*images*/
+.lcph{
+	width:65px;
+}
+
+.lcph:hover{
+	transform: scale(1.07);
+	background: #FB286B;
+    color: #FB286B;
+    box-shadow: 0 0 5px #FB286B,
+                0 0 25px #FB286B,
+                0 0 50px #FB286B,
+                0 0 200px #FB286B;  
+}
+
+.nutri{
+	padding: 30px 0;
+	background-color: #1b1b1b;
+	margin-top: 20px;
+}
+
+.nutri p{
+	text-align: justify;
+	color: #fff;
+}
+
+.content{
+	max-width: 1250px;
+	margin: auto;
+	padding: 0 30px;
+		
+}
