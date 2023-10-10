@@ -46,7 +46,7 @@
 					<li><a href="{{ route('checkout') }}">Checkout</a></li>
 					<li>
 						<div class="dropdown-container">
-							<a class="dropdown-button">{{ Auth::user()->name }}</a>
+							<a class="has-dropdown">{{ Auth::user()->name }}</a>
 							<div class="dropdown-content">
 								<a href="{{ route('logout') }}"
 									onclick="event.preventDefault();
