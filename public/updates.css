@@ -103,6 +103,7 @@
 
 /* Style for the dropdown container */
 .dropdown-container {
+    background-color: transparent;
     position: relative;
     display: inline-block;
 	margin-left: 20px;
@@ -136,7 +137,7 @@
 
 /* Style for the links on hover */
 .dropdown-content a:hover {
-    background-color: transparent;
+    background-color: #ddd;
 }
 
 /* Show the dropdown content when hovering over the dropdown container */
