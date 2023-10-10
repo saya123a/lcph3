@@ -269,6 +269,13 @@ main h2 {
     text-align: center;
 }
 
+/* Contents */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+	margin-top: 20px;
+}
+
 /* Number Styles */
 .item-number {
     background-color: #FB286B;
