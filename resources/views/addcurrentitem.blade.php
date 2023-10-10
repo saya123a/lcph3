@@ -14,10 +14,7 @@
 			<div class="content2">
 				<div class="logo">
 					<a href="{{ route('home') }}">
-                        <div>
-                            <img class="lcph2" src="img/logo_surau.png">
-                            <p>La Cottage Prayer Hall Food Bank</p>
-                        </div>
+                        <img class="lcph" src="img/logo_surau.png">
                     </a>
 				</div>
 				<ul class="menu-list">
