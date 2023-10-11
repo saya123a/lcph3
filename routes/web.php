@@ -23,7 +23,7 @@ use App\Mail\MyEmail;
 // Import the required classes at the top of the file
 use App\Http\Controllers\ResetPasswordController;
 
-// Add the following routes
+
 Route::get('password/reset/{token}', [ResetPasswordController::class, 'showResetForm'])->name('password.reset');
 Route::post('password/reset', [ResetPasswordController::class, 'reset'])->name('password.update');
 
@@ -32,8 +32,8 @@ Route::post('password/reset', [ResetPasswordController::class, 'reset'])->name('
 Route::get('/send-test-email', function () {
     Mail::to('arif01erezeki@gmail.com')->send(new MyEmail());
     return 'Test email sent!';
-});
-/**
+});**/
+
 Route::get('/', function () {
     return redirect()->route('login');
 });
@@ -46,7 +46,7 @@ Route::middleware(['auth'])->group(function () {
     /**Route::post('/home', [HomeController::class, 'homes'])->name('homes');
     Route::get('/home/{item}/edit', [HomeController::class, 'edit'])->name('edit');
     Route::put('/home/{item}/update', [HomeController::class, 'update'])->name('update');
-    Route::delete('/home/{item}/delete', [HomeController::class, 'delete'])->name('delete');
+    Route::delete('/home/{item}/delete', [HomeController::class, 'delete'])->name('delete');**/
     
     Route::get('/addnewitem', [ItemController::class, 'addnewitem'])->name('addnewitem');
     Route::post('/addnewitem', [ItemController::class, 'addnewitems'])->name('addnewitems');
@@ -63,4 +63,3 @@ Route::middleware(['auth'])->group(function () {
 
     // Add more protected routes as needed
 });
-**/
