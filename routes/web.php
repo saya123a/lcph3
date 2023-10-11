@@ -30,6 +30,10 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::get('/forgot-password', function () {
+    return view('auth.forgot-password');
+})->middleware('guest')->name('password.request');
+
 Route::post('/forgot-password', function (Request $request) {
     $request->validate(['email' => 'required|email']);
  
@@ -41,9 +45,6 @@ Route::post('/forgot-password', function (Request $request) {
                 ? back()->with(['status' => __($status)])
                 : back()->withErrors(['email' => __($status)]);
 })->middleware('guest')->name('password.email');
-
-Route::middleware(['auth'])->group(function () {
-    Route::get('/home', [HomeController::class, 'home'])->name('home');
 
 Route::get('/reset-password/{token}', function ($token) {
     return view('auth.reset-password', ['token' => $token]);
@@ -73,6 +74,9 @@ Route::post('/reset-password', function (Request $request) {
                 ? redirect()->route('login')->with('status', __($status))
                 : back()->withErrors(['email' => [__($status)]]);
 })->middleware('guest')->name('password.update');
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('/home', [HomeController::class, 'home'])->name('home');
     
     /**Route::post('/home', [HomeController::class, 'homes'])->name('homes');
     Route::get('/home/{item}/edit', [HomeController::class, 'edit'])->name('edit');
