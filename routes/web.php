@@ -18,7 +18,7 @@ use App\Http\Controllers\CheckoutController;
 */
 
 use Illuminate\Support\Facades\Mail;
-use App\Mail\TestEmail;
+use App\Mail\MyEmail;
 
 Route::get('/send-test-email', function () {
     Mail::to('arif01erezeki@gmail.com')->send(new TestEmail());
