@@ -21,7 +21,7 @@ use Illuminate\Support\Facades\Mail;
 use App\Mail\MyEmail;
 
 Route::get('/send-test-email', function () {
-    Mail::to('arif01erezeki@gmail.com')->send(new TestEmail());
+    Mail::to('arif01erezeki@gmail.com')->send(new MyEmail());
     return 'Test email sent!';
 });
 
