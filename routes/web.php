@@ -20,6 +20,15 @@ use App\Http\Controllers\CheckoutController;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\MyEmail;
 
+// Import the required classes at the top of the file
+use App\Http\Controllers\ResetPasswordController;
+
+// Add the following routes
+Route::get('password/reset/{token}', [ResetPasswordController::class, 'showResetForm'])->name('password.reset');
+Route::post('password/reset', [ResetPasswordController::class, 'reset'])->name('password.update');
+
+
+/**
 Route::get('/send-test-email', function () {
     Mail::to('arif01erezeki@gmail.com')->send(new MyEmail());
     return 'Test email sent!';
