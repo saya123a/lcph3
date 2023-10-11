@@ -1,3 +1,5 @@
+<?php
+
 // Import the required classes at the top of the file
 use Illuminate\Notifications\Notification;
 use Illuminate\Notifications\Messages\MailMessage;
