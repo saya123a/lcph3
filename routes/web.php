@@ -30,10 +30,6 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/forgot-password', function () {
-    return view('auth.forgot-password');
-})->middleware('guest')->name('password.request');
-
 Route::post('/forgot-password', function (Request $request) {
     $request->validate(['email' => 'required|email']);
  
