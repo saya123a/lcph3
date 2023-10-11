@@ -26,6 +26,6 @@ class MyEmail extends Mailable
     {
         return $this
             ->subject('My Email Subject')
-            ->view('emails.my_email'); // Blade view for email content
+            ->view('my_email'); // Blade view for email content
     }
 }
