@@ -54,13 +54,13 @@
                                 </span>
                             @enderror
                         </div>
-                        <!--<div class="signup-link">
-                                /*@if (Route::has('password.request'))
+                        <div class="signup-link">
+                                @if (Route::has('password.request'))
                                     <a class="btn btn-link" href="{{ route('password.request') }}">
                                         {{ __('Forgot Your Password?') }}
                                     </a>
-                                @endif*/
-						</div>-->
+                                @endif
+						</div>
                         <div class="field btn">
 						    <div class="btn-layer"></div>
 							<input type="submit" name="login" type="button" value="Login">
